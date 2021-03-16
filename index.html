@@ -137,7 +137,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="书山有路勤为径，学海无涯苦作舟。">
+            <span class="h2" id="subtitle" title="Welcome to my blog_">
               
             </span>
 
@@ -340,13 +340,13 @@
       
       $.ajax({
         type: 'GET',
-        url: 'https://v1.hitokoto.cn/',
+        url: 'https://v1.jinrishici.com/rensheng/lizhi',
         headers: {},
         dataType: 'json',
         success: function (result) {
           var text;
           if (result) {
-            var keys = 'hitokoto'.split('.')
+            var keys = 'content'.split('.')
             if (result instanceof Array) {
               result = result[0]
             }
