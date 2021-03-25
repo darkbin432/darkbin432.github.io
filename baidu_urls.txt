@@ -1,4 +1,4 @@
-https://blog.darkbin.icu/2021/03/24/%E6%B8%85%E6%98%8E%E5%B9%BF%E5%B7%9E%E8%A1%8C/
-https://blog.darkbin.icu/2021/03/21/2021%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95%E5%87%86%E5%A4%87/
-https://blog.darkbin.icu/2021/03/18/2021%E8%80%83%E7%A0%94%E7%BB%8F%E9%AA%8C%E5%B8%96/
-https://blog.darkbin.icu/2021/03/16/GitHub%20Pages%20+%20Hexo%20+%20Fluid%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/
+https://blog.darkbin.icu/posts/41aef3fa/
+https://blog.darkbin.icu/posts/6327c398/
+https://blog.darkbin.icu/posts/9f6d567e/
+https://blog.darkbin.icu/posts/e1745f02/
