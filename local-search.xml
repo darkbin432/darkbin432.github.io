@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>sql查询优化案例</title>
+    <link href="/posts/b9f794cf/"/>
+    <url>/posts/b9f794cf/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Mysql查询语句优化案例"><a href="#Mysql查询语句优化案例" class="headerlink" title="Mysql查询语句优化案例"></a>Mysql查询语句优化案例</h3><p>获取某用户的分数在所有分数中的排名（分数有重复提交）</p><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">原始查询语句<br><span class="hljs-type">time</span>: <span class="hljs-number">100</span>s<br><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span><br>(<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> weight_predict <br> <span class="hljs-keyword">WHERE</span> predict_weight <span class="hljs-operator">&lt;</span> ? <br> <span class="hljs-keyword">AND</span> user_code <span class="hljs-operator">!=</span> ?<br> <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> user_code, createdTime <span class="hljs-keyword">DESC</span>, id <span class="hljs-keyword">DESC</span>) <span class="hljs-keyword">as</span> a <br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> a.user_code<br><br>使用<span class="hljs-keyword">DISTINCT</span>优化<br><span class="hljs-type">time</span>: <span class="hljs-number">26</span>s<br><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> user_code<br><span class="hljs-keyword">FROM</span> weight_predict<br><span class="hljs-keyword">WHERE</span> predict_weight <span class="hljs-operator">&lt;</span> ? <br><span class="hljs-keyword">AND</span> user_code <span class="hljs-operator">!=</span> ?<br><br>在<span class="hljs-keyword">DISTINCT</span>基础上使用聚集函数<span class="hljs-built_in">COUNT</span>()<br><span class="hljs-type">time</span>: <span class="hljs-number">0.024</span>s<br><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> user_code) <span class="hljs-keyword">as</span> rank<br><span class="hljs-keyword">FROM</span> weight_predict<br><span class="hljs-keyword">WHERE</span> predict_weight <span class="hljs-operator">&lt;</span> ?<br><span class="hljs-keyword">AND</span> user_code <span class="hljs-operator">!=</span> ?<br><br>使用<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">COUNT</span>()<br><span class="hljs-type">time</span>: <span class="hljs-number">0.2</span>s<br><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">as</span> rank<br><span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">SELECT</span> user_code<br><span class="hljs-keyword">FROM</span> weight_predict<br><span class="hljs-keyword">WHERE</span> predict_weight <span class="hljs-operator">&lt;</span> ?<br><span class="hljs-keyword">AND</span> user_code <span class="hljs-operator">!=</span> ?<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> user_code) <span class="hljs-keyword">AS</span> a<br></code></pre></div></td></tr></table></figure><p><strong>两个问题</strong>：</p><ol><li>为什么distinct比group by要快？</li><li>为什么加上count会更快？</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Mysql</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Springboot-war包方式部署</title>
     <link href="/posts/47227197/"/>
     <url>/posts/47227197/</url>
