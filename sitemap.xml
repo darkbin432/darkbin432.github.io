@@ -158,20 +158,6 @@
 
   
   <url>
-    <loc>https://blog.darkbin.icu/tags/Java/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.darkbin.icu/tags/Springboot/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.darkbin.icu/tags/%E8%80%83%E7%A0%94/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
@@ -186,7 +172,28 @@
   </url>
   
   <url>
+    <loc>https://blog.darkbin.icu/tags/Java/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.darkbin.icu/tags/Springboot/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.darkbin.icu/tags/Redis/</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.darkbin.icu/tags/Mysql/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -201,13 +208,6 @@
   
   <url>
     <loc>https://blog.darkbin.icu/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.darkbin.icu/tags/Mysql/</loc>
     <lastmod>2021-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
