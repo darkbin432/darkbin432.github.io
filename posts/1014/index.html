@@ -1,0 +1,668 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="darkbin">
+  <meta name="keywords" content="">
+  <meta name="description" content="课程资源[中英字幕]吴恩达机器学习系列课程 课程讲义 What is machine learningMachine Learning Definition在没有明确设置的情况下，使计算机具有学习能力的研究领域。—— Arthur Samuel 计算机程序从经验E中学习，解决某一任务T，进行某一性能度量P，通过P测定在任务T上的表现因经验E而提高。—— Tom Mitchell  Machine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="吴恩达机器学习笔记（一）">
+<meta property="og:url" content="https://blog.darkbin.icu/posts/1014/index.html">
+<meta property="og:site_name" content="darkbin&#39;s blog">
+<meta property="og:description" content="课程资源[中英字幕]吴恩达机器学习系列课程 课程讲义 What is machine learningMachine Learning Definition在没有明确设置的情况下，使计算机具有学习能力的研究领域。—— Arthur Samuel 计算机程序从经验E中学习，解决某一任务T，进行某一性能度量P，通过P测定在任务T上的表现因经验E而提高。—— Tom Mitchell  Machine">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175116.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175128.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175143.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175153.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175203.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175215.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175227.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175242.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175254.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175307.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175318.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175331.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175343.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175359.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175412.png">
+<meta property="article:published_time" content="2021-09-16T12:56:31.000Z">
+<meta property="article:modified_time" content="2021-09-30T09:54:18.000Z">
+<meta property="article:author" content="darkbin">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175116.png">
+  
+  <title>吴恩达机器学习笔记（一） - darkbin&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/xcode.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>darkbin&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180701.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="吴恩达机器学习笔记（一）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      darkbin
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-16 20:56" pubdate>
+        星期四, 九月 16日 2021, 8:56 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">吴恩达机器学习笔记（一）</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：星期四, 九月 30日 2021, 5:54 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h4 id="课程资源"><a href="#课程资源" class="headerlink" title="课程资源"></a>课程资源</h4><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV164411b7dx">[中英字幕]吴恩达机器学习系列课程</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/TheisTrue/MLofAndrew-Ng">课程讲义</a></p>
+<h2 id="What-is-machine-learning"><a href="#What-is-machine-learning" class="headerlink" title="What is machine learning"></a>What is machine learning</h2><h3 id="Machine-Learning-Definition"><a href="#Machine-Learning-Definition" class="headerlink" title="Machine Learning Definition"></a>Machine Learning Definition</h3><p>在没有明确设置的情况下，使计算机具有学习能力的研究领域。—— Arthur Samuel</p>
+<p>计算机程序从经验E中学习，解决某一任务T，进行某一性能度量P，通过P测定在任务T上的表现因经验E而提高。—— Tom Mitchell</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175116.png" srcset="/img/loading.gif" lazyload alt="Example1"></p>
+<h3 id="Machine-Learning-Algorithms"><a href="#Machine-Learning-Algorithms" class="headerlink" title="Machine Learning Algorithms"></a>Machine Learning Algorithms</h3><ul>
+<li>Supervised learning 监督学习</li>
+<li>Unsupervised learning 无监督学习</li>
+</ul>
+<p>others: </p>
+<ul>
+<li>Reinforcement learning 强化学习</li>
+<li>Recommender systems 推荐系统</li>
+</ul>
+<h2 id="Supervised-Learning-监督学习"><a href="#Supervised-Learning-监督学习" class="headerlink" title="Supervised Learning 监督学习"></a>Supervised Learning 监督学习</h2><p>对于经过标记的数据集，通过算法得到指定问题的其他输入的“正确答案”</p>
+<h3 id="Regression-回归"><a href="#Regression-回归" class="headerlink" title="Regression 回归"></a>Regression 回归</h3><p>Predict continuous valued output 预测连续值的输出</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175128.png" srcset="/img/loading.gif" lazyload alt="回归问题-房价预测"></p>
+<h3 id="Classification-分类"><a href="#Classification-分类" class="headerlink" title="Classification 分类"></a>Classification 分类</h3><p>Discrete vauled output 预测离散值的输出</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175143.png" srcset="/img/loading.gif" lazyload alt="分类问题-肿瘤分类"></p>
+<h2 id="Unsupervised-Learning-无监督学习"><a href="#Unsupervised-Learning-无监督学习" class="headerlink" title="Unsupervised Learning 无监督学习"></a>Unsupervised Learning 无监督学习</h2><p>与监督学习中的算法不同，无监督学习算法不会对数据做标签(例如0表示良性1表示恶性)，而是让计算机自己找出数据集中包含的某种结构。</p>
+<h3 id="Clustering-聚类"><a href="#Clustering-聚类" class="headerlink" title="Clustering 聚类"></a>Clustering 聚类</h3><p>例如下图中的数据集，聚类算法可能判定该数据集中包含两个不同的簇，并把这些数据分成两个不同的簇。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175153.png" srcset="/img/loading.gif" lazyload alt="聚类示例"></p>
+<h2 id="Linear-Regression-With-One-Variable-单变量线性回归"><a href="#Linear-Regression-With-One-Variable-单变量线性回归" class="headerlink" title="Linear Regression With One Variable 单变量线性回归"></a>Linear Regression With One Variable 单变量线性回归</h2><h3 id="Model-Representation-模型描述"><a href="#Model-Representation-模型描述" class="headerlink" title="Model Representation 模型描述"></a>Model Representation 模型描述</h3><h4 id="案例——卖房子问题"><a href="#案例——卖房子问题" class="headerlink" title="案例——卖房子问题"></a>案例——卖房子问题</h4><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175203.png" srcset="/img/loading.gif" lazyload alt="样本分布"></p>
+<h4 id="训练过程"><a href="#训练过程" class="headerlink" title="训练过程"></a>训练过程</h4><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175215.png" srcset="/img/loading.gif" lazyload alt="训练过程"></p>
+<ol>
+<li><p>准备训练集 Training Set</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175227.png" srcset="/img/loading.gif" lazyload alt="准备训练集"></p>
+</li>
+<li><p>构建假设函数h(hypothesis)</p>
+<p>在此样例中，我们选择假设函数h为线性函数：<br>$$<br>h_\theta(x)=\theta_0+\theta_1x<br>$$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175242.png" srcset="/img/loading.gif" lazyload alt="线性回归模型"></p>
+<p>这样的以线性函数为假设函数的模型称为：<strong>线性回归模型 linear regression</strong></p>
+<p>而此例中只有一个变量x，所以称为：linear regression with one variable 或者 Univariate linear regression</p>
+</li>
+</ol>
+<h3 id="Cost-Function-代价函数"><a href="#Cost-Function-代价函数" class="headerlink" title="Cost Function 代价函数"></a>Cost Function 代价函数</h3><p>对于假设函数h<br>$$<br>h_\theta(x)=\theta_0+\theta_1*x<br>$$<br>$\theta_0$和$\theta_1$称为模型参数，现在的任务是需要选择不同的$\theta_0$和$\theta_1$来使得假设函数h得到的预测房价价格与实际的价格最接近，由此可以得到下面的代价函数 J<br>$$<br>J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=1}^m{(h_\theta(x^i)-y^i)^2}<br>$$</p>
+<p>其意义是，对于每个不同的参数$\theta_0$和$\theta_1$，将每个训练样本通过假设函数h得到对应x点的预测值减去该点处的实际房价值y，并将得到的差值平方后求和，并通过乘以$\frac{1}{2m}$使得得到的结果更加容易理解一些。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175254.png" srcset="/img/loading.gif" lazyload alt="代价函数构造"></p>
+<p>实际该函数得到的结果是不同模型参数$\theta_0$和$\theta_1$时线性回归模型得到的房价和实际房价之间的误差值，然后我们取这个<strong>误差值最小时的参数值</strong>，就可以得到比较好的假设函数h。<br>$$<br>Goal:minimize_{\theta_0,\theta_1}J(\theta_0,\theta_1)<br>$$<br>上述代价函数也被称为平方误差函数，平方误差代价函数大概是解决回归问题最常用的手段。</p>
+<h3 id="代价函数（一）"><a href="#代价函数（一）" class="headerlink" title="代价函数（一）"></a>代价函数（一）</h3><p>简化假设函数h，设置$\theta_0=0$，使代价函数J变成关于$\theta_1$的一元函数，便于理解。<br>$$<br>假设\theta_0=0,则h_\theta(x)=\theta_1*x,J(\theta_1)=\frac{1}{2m}\sum_{i=1}^m{(\theta_1x^i-y^i)^2}<br>$$<br>选取3组样本数据$(1,1),(2,2),(3,3)$，下图为简化后的假设函数和代价函数在$\theta_1$为不同值时图像</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175307.png" srcset="/img/loading.gif" lazyload alt="简化后的假设函数和代价函数"></p>
+<p>最终我们得出结论，在该组样本中，$\theta_1=1$时取得的代价函数值最小。</p>
+<h3 id="代价函数（二）"><a href="#代价函数（二）" class="headerlink" title="代价函数（二）"></a>代价函数（二）</h3><p>在简化的假设函数h的基础上，将固定的$\theta_0$添加回假设函数，这样得到的代价函数就不是简单地二次函数了，而是一个三维的图像。我们可以通过3D图像和等号线图的方式来可视化这个代价函数的结果。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175318.png" srcset="/img/loading.gif" lazyload alt="3D图像"></p>
+<p>上图中递补的两个横坐标分别表示$\theta_0$和$\theta_1$的取值，纵坐标表示代价函数J的结果，最终呈现出来的是一个碗形的三维图像。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175331.png" srcset="/img/loading.gif" lazyload alt="等高线图"></p>
+<p>另外我们还可以使用等高线图的方式来表示代价函数J，上图中右边的图表就是代价函数J的等高线图。我们通过之前的碗状的三维图像可以看出，途中的椭圆圈即代表了一个高度，在同一个椭圆圈线上的点的函数值是相同的，而越靠近图像的中心，函数值越小。</p>
+<p>我们可以通过代价函数的图像，找到对应的参数$\theta_0$和$\theta_1$，从而画出其在左侧图表中的假设函数图像，以此来评估该假设函数是否与样本数据很好的拟合。</p>
+<h3 id="Gradient-Descent-梯度下降算法"><a href="#Gradient-Descent-梯度下降算法" class="headerlink" title="Gradient Descent 梯度下降算法"></a>Gradient Descent 梯度下降算法</h3><p>梯度下降算法不仅经常被用在线性回归问题，也广泛地被应用在机器学习的众多领域。</p>
+<h4 id="梯度下降算法的步骤"><a href="#梯度下降算法的步骤" class="headerlink" title="梯度下降算法的步骤"></a>梯度下降算法的步骤</h4><ol>
+<li>初始化参数</li>
+<li>不停变更参数值使代价函数的值逐渐减小直到得到一个最小值或局部最小值</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175343.png" srcset="/img/loading.gif" lazyload alt="梯度下降算法模拟"></p>
+<p>而起始点的偏移则可能使梯度下降算法得到一个不同的局部最优解。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175359.png" srcset="/img/loading.gif" lazyload alt="起始点偏移导致得到另一个局部最小值"></p>
+<h4 id="梯度下降算法的定义"><a href="#梯度下降算法的定义" class="headerlink" title="梯度下降算法的定义"></a>梯度下降算法的定义</h4><p>$$<br>\theta_j=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1),for(j = 0,and,j = 1)<br>$$</p>
+<p>该公式中的$\alpha$代表了learning rate(学习率)，它用来控制算法以多大的幅度来更新参数$\theta_j$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930175412.png" srcset="/img/loading.gif" lazyload alt="梯度下降"></p>
+<p>公式中的偏导数实际上是求代价函数的斜率。在上图的代价函数中，当$\theta_1$在最低点的右侧时，所求偏导数值为正数，$\theta_1-\alpha J(\theta_1)\leq\ \theta_1$，符合J函数值减小的目的；当$\theta_1$在最低点的左侧时，所求偏导数值为负数，$\theta_1-\alpha J(\theta_1)\geq\ \theta_1$，同样符合，由此看出梯度下降算法的可行性。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Machine-Learning/">Machine Learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1015/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CMAI听会报告-AI在心脏MR检查与诊断中的应用-夏黎明</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/1013/">
+                        <span class="hidden-mobile">Springboot-Swagger2自定义basePath</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appKey":"n3741pPIzE7tCh989HOf2pwX","path":"window.location.pathname","placeholder":"说点什么","avatar":"identicon","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appkey":"n3741pPIzE7tCh989HOf2pwX","verify":true,"visitor":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <span>darkbin</span> <i class="iconfont icon-love"></i> <a href="https://github.com/darkbin432" target="_blank" rel="nofollow noopener"><span>GitHub</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?197a09e7bb174821fb31a81f460ec38e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

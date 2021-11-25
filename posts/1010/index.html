@@ -1,0 +1,989 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="darkbin">
+  <meta name="keywords" content="">
+  <meta name="description" content="第一章 程序设计和C语言1.C语言的特点（了解）2.C语言程序的结构（选择、判断、填空） 一个程序由一个或多个源程序文件组成，一个源程序文件中可以包含： 预处理指令 全局声明 函数定义   函数是C程序的主要组成部分 一个函数包含两个部分 函数首部 函数体   程序总是从main函数开始执行的 程序中要求计算机的操作是由函数中的C语句完成的 在每个数据声明和语句的最后必须有一个分号 C语言本身不提">
+<meta property="og:type" content="article">
+<meta property="og:title" content="杭州师范大学841软件专业基础-C语言知识提纲">
+<meta property="og:url" content="https://blog.darkbin.icu/posts/1010/index.html">
+<meta property="og:site_name" content="darkbin&#39;s blog">
+<meta property="og:description" content="第一章 程序设计和C语言1.C语言的特点（了解）2.C语言程序的结构（选择、判断、填空） 一个程序由一个或多个源程序文件组成，一个源程序文件中可以包含： 预处理指令 全局声明 函数定义   函数是C程序的主要组成部分 一个函数包含两个部分 函数首部 函数体   程序总是从main函数开始执行的 程序中要求计算机的操作是由函数中的C语句完成的 在每个数据声明和语句的最后必须有一个分号 C语言本身不提">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://iknow-pic.cdn.bcebos.com/b03533fa828ba61ec318c79e4d34970a314e5988?x-bce-process=image/resize,m_lfit,w_600,h_800,limit_1/quality,q_85">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180348.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180400.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180412.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180423.png">
+<meta property="article:published_time" content="2021-07-15T11:15:03.000Z">
+<meta property="article:modified_time" content="2021-11-02T14:12:46.000Z">
+<meta property="article:author" content="darkbin">
+<meta property="article:tag" content="考研">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://iknow-pic.cdn.bcebos.com/b03533fa828ba61ec318c79e4d34970a314e5988?x-bce-process=image/resize,m_lfit,w_600,h_800,limit_1/quality,q_85">
+  
+  <title>杭州师范大学841软件专业基础-C语言知识提纲 - darkbin&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/xcode.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>darkbin&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180701.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="杭州师范大学841软件专业基础-C语言知识提纲">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      darkbin
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-15 19:15" pubdate>
+        星期四, 七月 15日 2021, 7:15 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      30 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">杭州师范大学841软件专业基础-C语言知识提纲</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：星期二, 十一月 2日 2021, 10:12 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h3 id="第一章-程序设计和C语言"><a href="#第一章-程序设计和C语言" class="headerlink" title="第一章 程序设计和C语言"></a>第一章 程序设计和C语言</h3><h4 id="1-C语言的特点（了解）"><a href="#1-C语言的特点（了解）" class="headerlink" title="1.C语言的特点（了解）"></a>1.C语言的特点（了解）</h4><h4 id="2-C语言程序的结构（选择、判断、填空）"><a href="#2-C语言程序的结构（选择、判断、填空）" class="headerlink" title="2.C语言程序的结构（选择、判断、填空）"></a>2.C语言程序的结构（选择、判断、填空）</h4><ol>
+<li>一个程序由一个或多个源程序文件组成，一个源程序文件中可以包含：<ul>
+<li>预处理指令</li>
+<li>全局声明</li>
+<li>函数定义</li>
+</ul>
+</li>
+<li>函数是C程序的主要组成部分</li>
+<li>一个函数包含两个部分<ul>
+<li>函数首部</li>
+<li>函数体</li>
+</ul>
+</li>
+<li>程序总是从main函数开始执行的</li>
+<li>程序中要求计算机的操作是由函数中的C语句完成的</li>
+<li>在每个数据声明和语句的最后必须有一个分号</li>
+<li>C语言本身不提供输入输出语句</li>
+<li>程序应当包含注释</li>
+</ol>
+<h3 id="第二章-算法"><a href="#第二章-算法" class="headerlink" title="第二章 算法"></a>第二章 算法</h3><h4 id="1-算法和数据结构的定义（了解）"><a href="#1-算法和数据结构的定义（了解）" class="headerlink" title="1.算法和数据结构的定义（了解）"></a>1.算法和数据结构的定义（了解）</h4><h4 id="2-算法的特性（选择、判断、填空）"><a href="#2-算法的特性（选择、判断、填空）" class="headerlink" title="2.算法的特性（选择、判断、填空）"></a>2.算法的特性（选择、判断、填空）</h4><ol>
+<li>有穷性</li>
+<li>确定性</li>
+<li>有零个或多个输入</li>
+<li>有一个或多个输出</li>
+<li>有效性</li>
+</ol>
+<h4 id="3-三种基本结构（选择、填空、判断）"><a href="#3-三种基本结构（选择、填空、判断）" class="headerlink" title="3.三种基本结构（选择、填空、判断）"></a>3.三种基本结构（选择、填空、判断）</h4><ol>
+<li>顺序结构</li>
+<li>选择结构</li>
+<li>循环结构<ul>
+<li>当型循环 while</li>
+<li>直到型循环 do while</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-结构化程序设计方法（了解）"><a href="#4-结构化程序设计方法（了解）" class="headerlink" title="4.结构化程序设计方法（了解）"></a>4.结构化程序设计方法（了解）</h4><ol>
+<li>自顶向下</li>
+<li>逐步细化</li>
+<li>模块化设计</li>
+<li>结构化编程</li>
+</ol>
+<h4 id="5-经典算法（会写）"><a href="#5-经典算法（会写）" class="headerlink" title="5.经典算法（会写）"></a>5.经典算法（会写）</h4><ol>
+<li>闰年判断</li>
+<li>方程求根</li>
+</ol>
+<h3 id="第三章-顺序程序设计"><a href="#第三章-顺序程序设计" class="headerlink" title="第三章 顺序程序设计"></a>第三章 顺序程序设计</h3><h4 id="1-常量（选择、判断）"><a href="#1-常量（选择、判断）" class="headerlink" title="1.常量（选择、判断）"></a>1.常量（选择、判断）</h4><ol>
+<li>整形常量</li>
+<li>实型常量<ul>
+<li>十进制小数形式</li>
+<li>指数形式</li>
+</ul>
+</li>
+<li>字符常量<ul>
+<li>普通字符 单引号’括起来的</li>
+<li>转义字符 ‘\‘开头</li>
+</ul>
+</li>
+<li>字符串常量 双引号“括起来的</li>
+<li>符号常量 #define指令指定的符号 <strong>注意：符号常量不占内存，在预编译时替换代码中的对应字符后就不存在了</strong></li>
+</ol>
+<h4 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h4><ol>
+<li>先定义后使用，区分变量名变量值…</li>
+</ol>
+<h4 id="3-常变量"><a href="#3-常变量" class="headerlink" title="3.常变量"></a>3.常变量</h4><ol>
+<li>使用const关键字定义</li>
+</ol>
+<h4 id="4-标识符（选择、判断）"><a href="#4-标识符（选择、判断）" class="headerlink" title="4.标识符（选择、判断）"></a>4.标识符（选择、判断）</h4><ol>
+<li>定义：用来对变量、常变量、函数等命名的有效字符序列</li>
+<li>C语言规定标识符只能由字母、数字和下划线组成，且第1个字符必须为字母或下划线， C语言区分大小写</li>
+</ol>
+<h4 id="5-数据类型（了解）"><a href="#5-数据类型（了解）" class="headerlink" title="5.数据类型（了解）"></a>5.数据类型（了解）</h4><ol>
+<li><p>了解C语言允许使用的数据类型</p>
+<p><img src="https://iknow-pic.cdn.bcebos.com/b03533fa828ba61ec318c79e4d34970a314e5988?x-bce-process=image/resize,m_lfit,w_600,h_800,limit_1/quality,q_85" srcset="/img/loading.gif" lazyload alt="C语言数据类型"></p>
+</li>
+</ol>
+<h4 id="6-整型数据"><a href="#6-整型数据" class="headerlink" title="6.整型数据"></a>6.整型数据</h4><ol>
+<li>基本整形（int） 4字节 用补码形式存放 正数原码=反码=补码，求负数补码的方法：现将此数的绝对值写成二进制形式，然后对每一位按位取反，再加一。最左边一位为符号位，0为正数，1为负数 占位符%d</li>
+<li>短整型（short int） 2字节 占位符%hd</li>
+<li>长整型（long int） 4字节 占位符%ld</li>
+<li>双长整型（long long int） 8字节 占位符%lld</li>
+<li>sizeof()运算符：用于测量变量长度</li>
+<li>unsigned 无符号 和 signed 有符号修饰符 </li>
+</ol>
+<h4 id="7-字符型数据"><a href="#7-字符型数据" class="headerlink" title="7.字符型数据"></a>7.字符型数据</h4><ol>
+<li>字符和字符代码 大多数系统都是用ASCII码来表示字符，在C程序中也可以使用ASCII码来代替对应字符</li>
+<li>字符变量 用char定义 可以把0-127中任意一个数赋值给字符变量（ASCII） 占位符%c 也可以用%d输出符号的ASCII码</li>
+</ol>
+<h4 id="8-浮点型数据"><a href="#8-浮点型数据" class="headerlink" title="8.浮点型数据"></a>8.浮点型数据</h4><ol>
+<li>单精度浮点数float 4字节 6位有效数字 存储时系统将实型数据分成小数部分和指数部分分别存放</li>
+<li>双精度浮点数double 8字节 15位有效数字 C语言进行浮点数运算时将float型自动转换成double型进行计算</li>
+<li>长双精度浮点数long double 8字节</li>
+</ol>
+<h4 id="9-运算符（选择、判断、填空）"><a href="#9-运算符（选择、判断、填空）" class="headerlink" title="9.运算符（选择、判断、填空）"></a>9.运算符（选择、判断、填空）</h4><ol>
+<li><p>算数运算符，/ ：整数除以整数时向零取整</p>
+</li>
+<li><p>++自增、–自减运算符，在变量前先运算再取值，在变量后先取值再运算，举例：a=1;b=++a=&gt;a=2,b=2 | a=1;b=a++=&gt;a=2,b=1。</p>
+</li>
+<li><p>算术表达式 表达式是有值的</p>
+</li>
+<li><p>运算符优先级 <strong>注意：需要背诵，考的概率很高</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180348.jpg" srcset="/img/loading.gif" lazyload alt="C语言运算符优先级"></p>
+</li>
+<li><p>强制类型转换：（类型名）（表达式）</p>
+</li>
+</ol>
+<h4 id="10-C语句"><a href="#10-C语句" class="headerlink" title="10.C语句"></a>10.C语句</h4><ol>
+<li>控制语句 只有9种<ul>
+<li>if else</li>
+<li>for</li>
+<li>while</li>
+<li>do while</li>
+<li>continue</li>
+<li>break</li>
+<li>switch</li>
+<li>return</li>
+<li>goto</li>
+</ul>
+</li>
+<li>函数调用语句</li>
+<li>表达式语句</li>
+<li>空语句</li>
+<li>复合语句 又称语句块</li>
+</ol>
+<h4 id="11-赋值语句"><a href="#11-赋值语句" class="headerlink" title="11.赋值语句"></a>11.赋值语句</h4><ol>
+<li>赋值运算符 =</li>
+<li>赋值表达式：变量 赋值运算符 表达式</li>
+<li>赋值过程中的类型转换<ul>
+<li>浮点型赋值给整型，舍弃小数部分</li>
+<li>整形赋值给单、双精度浮点型，数值不变，以浮点数形式存放</li>
+<li>双精度浮点型赋值给单精度浮点型，只取6-7位有效数字</li>
+<li>字符型赋值给整型，将字符的ASCII码赋值给整型</li>
+<li>将占字节多的整型赋值给占字节少的整型或者字符型，低字节原封不动复制，发生截断</li>
+</ul>
+</li>
+<li>赋值语句，赋值表达式+分号</li>
+<li>变量赋初值 int a = 1;</li>
+</ol>
+<h4 id="12-输入输出语句"><a href="#12-输入输出语句" class="headerlink" title="12.输入输出语句"></a>12.输入输出语句</h4><ol>
+<li>scanf，输入时要在变量前增加取地址符&amp;，否则将会出错 ,例：<code>scanf(&quot;%d&quot;, &amp;a);</code>格式：scanf（格式控制，地址表列），详见书本3.5.4</li>
+<li>printf，输入输出要使用类型对应的占位符，格式：printf（格式控制，输出表列），详见书本3.5.3</li>
+<li>C语言本身不提供输入输出语句，scanf和printf都是C语言函数库中的标准输入输出函数，需要在程序开头使用#include指令将有关的头文件放在程序中</li>
+<li>字符输入输出函数putchar（c）、getchar（），详见书本3.5.5</li>
+</ol>
+<h3 id="第四章-选择结构程序设计"><a href="#第四章-选择结构程序设计" class="headerlink" title="第四章 选择结构程序设计"></a>第四章 选择结构程序设计</h3><h4 id="1-选择语句"><a href="#1-选择语句" class="headerlink" title="1.选择语句"></a>1.选择语句</h4><ol>
+<li>if语句</li>
+<li>switch语句<ul>
+<li>switch中括号的表达式一般为整型或者字符型</li>
+<li>{}语句体中由多个case开头的语句和最多一个default开头的语句行组成</li>
+<li>case’A‘和default都起标号的作用，用来标记一个位置</li>
+<li>default语句用来执行表达式的值没有与case中的值匹配的情况，也可以没有</li>
+<li>每个case的值必须不同</li>
+<li>当表达式的值被一个case语句获取并执行后，程序会继续往下执行，不再进行判断，所以可以在case语句中加入break;语句使其执行完之后直接退出switch语句，<strong>注意：这个特性经常考，在读程序求结果题中出现</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="2-关系运算符和关系表达式"><a href="#2-关系运算符和关系表达式" class="headerlink" title="2.关系运算符和关系表达式"></a>2.关系运算符和关系表达式</h4><ol>
+<li>优先级：&lt;、&lt;=、&gt;、&gt;= 优先级大于 == 、!=，关系运算符优先级低于算术运算符，高于赋值运算符</li>
+<li>关系表达式的值为1或0代表真、假</li>
+</ol>
+<h4 id="3-逻辑运算符和逻辑表达式"><a href="#3-逻辑运算符和逻辑表达式" class="headerlink" title="3.逻辑运算符和逻辑表达式"></a>3.逻辑运算符和逻辑表达式</h4><ol>
+<li>逻辑运算符：&amp;&amp; 、||、 !</li>
+<li>逻辑表达式从左到右扫描求解，在逻辑表达式中并不是每个表达式都会被执行，当使用&amp;&amp;时，左边表达式为0时，整个表达式值为0，便不继续执行符号右边的表达式；当使用||时，左边表达式为1时，整个表达式值为1，便不继续执行符号右边的表达式，<strong>注意：这个点经常考，容易出在表达式求值题中</strong></li>
+</ol>
+<h4 id="4-条件运算符和条件表达式"><a href="#4-条件运算符和条件表达式" class="headerlink" title="4.条件运算符和条件表达式"></a>4.条件运算符和条件表达式</h4><ol>
+<li>条件运算符由？和：组成，要求有三个操作对象，成为三目运算符，一般形式为：表达式1？表达式2：表达式3，当表达式1为真时，执行表达式2，否则执行表达式3</li>
+<li>条件运算符优先级高于赋值运算符</li>
+</ol>
+<h3 id="第五章-循环结构程序设计"><a href="#第五章-循环结构程序设计" class="headerlink" title="第五章 循环结构程序设计"></a>第五章 循环结构程序设计</h3><h4 id="1-while循环"><a href="#1-while循环" class="headerlink" title="1.while循环"></a>1.while循环</h4><ol>
+<li>while和do while的区别</li>
+</ol>
+<h4 id="2-for循环"><a href="#2-for循环" class="headerlink" title="2.for循环"></a>2.for循环</h4><ol>
+<li>形式：for（表达式1：表达式2：表达式3）{语句}，表达式1作用为设置初始值，只执行一次；表达式2是循环条件表达式，用于判定是否继续循环；表达式3作为循环的调整，一般用来调整循环变量，在循环体执行完之后执行</li>
+</ol>
+<h4 id="3-改变循环状态"><a href="#3-改变循环状态" class="headerlink" title="3.改变循环状态"></a>3.改变循环状态</h4><ol>
+<li>使用break语句可以提前终止循环，即跳出整个循环继续往下执行</li>
+<li>使用continue语句提前结束本次循环，即跳过当前的循环，进行下一次循环</li>
+</ol>
+<h3 id="第六章-利用数组处理批量数据"><a href="#第六章-利用数组处理批量数据" class="headerlink" title="第六章 利用数组处理批量数据"></a>第六章 利用数组处理批量数据</h3><h4 id="1-数组的定义"><a href="#1-数组的定义" class="headerlink" title="1.数组的定义"></a>1.数组的定义</h4><ol>
+<li>数组是一组有序数据的集合</li>
+<li>用一个数组名和下标来唯一确定数组中的元素</li>
+<li>数组中的每一个元素都属于同一个数据类型</li>
+</ol>
+<h4 id="2-一维数组"><a href="#2-一维数组" class="headerlink" title="2.一维数组"></a>2.一维数组</h4><ol>
+<li>定义一维数组的一般形式：类型符 数组名[常量表达式]，如<code>int a[10]</code>;</li>
+<li>引用一维数组元素：数组名[下标]，如<code>a[2]</code></li>
+<li>一维数组的初始化：在定义数组时可以对全部元素进行初始化，如<code>int a[5]=&#123;1,2,3,4,5&#125;</code>;也可以只对一部分元素初始化，如<code>int a[5]=&#123;1,2&#125;</code>,后面几个元素值默认赋值为0，在对全部元素初始化时可以不指定数组长度，如<code>int a[]=&#123;1,2,3,4,5&#125;</code>;</li>
+</ol>
+<h4 id="3-二维数组"><a href="#3-二维数组" class="headerlink" title="3.二维数组"></a>3.二维数组</h4><ol>
+<li>定义二维数组的一般形式：类型符 数组名[常量表达式][常量表达式]，如<code>int a[10][10]</code>;可以把二维数组看成特殊的一维数组，即每个数组元素对应一个一维数组，也可以看做是矩阵</li>
+<li><strong>在C语言中二维数组中元素排列的顺序是按行存放的（考点：填空、判断）</strong></li>
+<li>引用二维数组的元素：数组名[下标][下标]，前为行号，后为列号</li>
+<li>二维数组的初始化：<ul>
+<li>分行初始化：<code>int a[3][4]=&#123;&#123;1,2,3,4&#125;,&#123;5,6,7,8&#125;,&#123;9,10,11,12&#125;&#125;</code></li>
+<li>将所有数据写在一个花括号中，按数组元素在内存中的排序赋值：<code>int a[3][4]=&#123;1,2,3,4,5,6,7,8,9,10,11,12&#125;</code></li>
+<li>可以对部分元素赋值：<code>int a[3][4] = &#123;&#123;1&#125;,&#123;5&#125;,&#123;9&#125;&#125;</code>,此例为给第一行第一个元素赋值1，第二行第一个元素赋值5，第三行第一个元素赋值9</li>
+<li>如果对全部元素赋初值，则第一维的长度可以不指定，但第二维必须指定，如<code>int a[][4]=&#123;1,2,3,4,5,6,7,8,9,10,11,12&#125;</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="4-字符数组和字符串"><a href="#4-字符数组和字符串" class="headerlink" title="4.字符数组和字符串"></a>4.字符数组和字符串</h4><ol>
+<li><p>C语言中，字符串是使用字符数组来处理的。C语言规定了一个字符串结束标志，以字符’\0’作为结束标志。如果字符数组中存在’\0’时，可以将其看做字符串，字符串的有效字符为’\0’前的字符。</p>
+</li>
+<li><p>C语言用字符数组存储字符串常量时会在其末尾自动添加’\0’，程序中也往往通过’\0’的位置来判断字符串是否结束，而不是通过字符串的长度。</p>
+</li>
+<li><p>字符数组存放字符串的初始化方式：<code>char str[] = &#123;&quot;China&quot;&#125;;</code> 或者<code>char str[] = &quot;China&quot;;</code> 此时字符数组的长度为6而不是5</p>
+</li>
+<li><p>如果定义的字符数组长度大于初始化的字符串，则后面的位置会全部被填充为’\0’，如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180400.png" srcset="/img/loading.gif" lazyload alt="字符数组"></p>
+</li>
+<li><p>字符数组的输入输出：可以逐个字符输入输出，使用%c占位符，也可以使用%s占位符进行一次输入和输出，如<code>scanf(&quot;%s&quot;, a);</code>或<code>printf(&quot;%s\n&quot;, a);</code>，输入输出是使用的是字符数组的名字。</p>
+</li>
+<li><p>字符串处理函数 **注意：在使用字符串处理函数时，需要在程序开头引入string.h头文件：<code>#include&lt;string.h&gt;</code>**：</p>
+<ul>
+<li>puts()：字符串输出函数，一般形式为 <code>puts(字符数组);</code></li>
+<li>gets()：字符串输入函数，一般形式为 <code>gets(字符数组);</code></li>
+<li>strcat()：字符串连接函数，一般形式为 <code>strcat(字符数组1, 字符数组);</code>将字符数组2拼接到字符数组1的后面，函数返回值为字符数组1的地址，<strong>注意：字符数组1的大小必须足够容纳两个字符数组</strong></li>
+<li>strcpy()&amp;strncpy()：字符串复制函数，一般形式为 <code>strcpy(字符数组1, 字符串2);</code>将字符串2复制到字符数组1中去，<strong>注意：字符数组1的大小必须足够容纳字符串2，参数前者必须为字符数组，后者可以为字符串常量，不能直接使用赋值语句对字符数组进行赋值</strong>；可以使用<code>strcpy(字符数组1, 字符串2, n);</code>来指定将字符串2的前几个字符赋值到字符数组1。</li>
+<li>strcmp()：字符串比较函数，一般形式为 <code>strcmp(字符串1, 字符串2);</code>比较规则为将两个字符串从左到右逐个字符进行比较（按ASCII码值），直到出现不同字符或遇到’\0’为止。如果全部字符相同则认为两字符串相等；若出现不同字符，则以第一对不同字符的比较结果为准。如果两个字符串相等，函数返回0；如果字符串1&gt;字符串2，返回一个正整数；如果字符串1&lt;字符串2，返回一个负整数。</li>
+<li>strlen()：字符串长度计算函数，一般形式为 <code>strlen(字符数组);</code>其返回值为字符串的实际长度（不包含’\0’）。</li>
+<li>strlwr()：字符串转化为小写函数，一般形式为 <code>strlwr(字符串);</code>作用为将字符串中的大写字符转换成小写字符。</li>
+<li>strupr()：字符串转化为大写函数，一般形式为 <code>strupr(字符串);</code>作用为将字符串中的小写字符转换成大写字符。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第七章-用函数实现模块化程序设计"><a href="#第七章-用函数实现模块化程序设计" class="headerlink" title="第七章 用函数实现模块化程序设计"></a>第七章 用函数实现模块化程序设计</h3><h4 id="1-C函数"><a href="#1-C函数" class="headerlink" title="1.C函数"></a>1.C函数</h4><ol>
+<li>一个源程序文件由一个或多个函数以及其他有关内容组成，在程序编译时以源程序文件为单位，而不是以函数为单位</li>
+<li>C程序的执行是从main函数开始的。</li>
+<li>所有函数都是平行的，即在定义函数时是分别进行的，是相互独立的。一个函数并不从属于另一个函数，即函数不能嵌套定义。函数间可以相互调用，但不能调用main函数，main函数是被操作系统调用的。</li>
+<li>从用户使用的角度来看，函数分为两种：<ul>
+<li>库函数：由系统提供，不用用户自己定义可以直接使用的。</li>
+<li>用户自己定义的函数，用来解决用户专门的需求。</li>
+</ul>
+</li>
+<li>从函数的形式来看，函数分为两类：<ul>
+<li>无参函数：在调用时，主调函数不向被调函数传递参数，无参函数一般用来执行指定的一组操作。</li>
+<li>有参函数：在调用时，主调函数通过参数向被调函数传递数据，一般情况下，执行被调函数时会得到一个函数值，供主调函数使用。</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-定义函数"><a href="#2-定义函数" class="headerlink" title="2.定义函数"></a>2.定义函数</h4><ol>
+<li>在C语言中用到的函数，必须“先定义，后使用”。函数定义必须包含一下内容：<ul>
+<li>指定函数的名字，以便之后调用</li>
+<li>指定函数的类型，即函数返回值的类型</li>
+<li>指定函数的参数的名字和类型，以便在调用函数时向他们传递数据。</li>
+<li>指定函数应当完成什么操作，即函数的功能。</li>
+</ul>
+</li>
+<li>函数定义的形式，详见书本7.2.2</li>
+</ol>
+<h4 id="3-调用函数"><a href="#3-调用函数" class="headerlink" title="3.调用函数"></a>3.调用函数</h4><ol>
+<li>一般形式：函数名(实参列表)</li>
+<li>形式参数和实际参数：<ul>
+<li>形式参数：在定义函数时，括号里面的变量名</li>
+<li>实际参数：调用函数时，函数名后面括号中的参数</li>
+<li>形参和实参之间的数据传递：实参和形参的类型应当相同或者赋值兼容（如浮点数传给int类型）</li>
+</ul>
+</li>
+<li>调用过程：<ul>
+<li>在定义函数时指定的形参不占用内存，在调用函数时形参才被临时分配内存单元</li>
+<li>将实参的值传递给形参</li>
+<li>利用形参进行运算或其他操作</li>
+<li>通过return语句将函数值带回主调函数，如果函数不需要返回值，则可以不写return语句，此时函数返回值类型为void</li>
+<li>调用结束后，形参的内存被释放 <strong>注意：实参的值不发生改变，函数调用时形参值的变化不影响实参</strong></li>
+</ul>
+</li>
+<li>函数的返回值：<ul>
+<li>函数的返回值通过return语句获得</li>
+<li>应当在函数定义时，指定确定的返回值类型</li>
+<li>函数定义的返回值类型应当和return语句中的表达式类型相同</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-函数声明和函数原型（了解）"><a href="#4-函数声明和函数原型（了解）" class="headerlink" title="4.函数声明和函数原型（了解）"></a>4.函数声明和函数原型（了解）</h4><ol>
+<li>如果函数定义的位置在主调函数的后面，则应该在主调函数中对被调用的函数做<strong>声明</strong>，其作用是将函数名、函数参数等信息通知编译系统，一遍在函数调用时，编译系统能够正确识别函数并检查调用是否合法。如果函数定义再主调函数前，则不需要做函数声明。</li>
+<li>函数原型：函数定义时的第一行（即函数首部）成为函数原型，函数声明时使用的就是函数原型+分号</li>
+<li>函数在声明时可以不指定形参的变量名，如<code>int print(int, float, char)</code>，因为声明只是为了编译系统检验函数调用的合法性，对函数的参数名称不感兴趣。但是在函数定义时需要补上变量名，否则形参无法在函数中使用。</li>
+</ol>
+<h4 id="5-函数的嵌套调用"><a href="#5-函数的嵌套调用" class="headerlink" title="5.函数的嵌套调用"></a>5.函数的嵌套调用</h4><ol>
+<li><p>执行过程：</p>
+<ul>
+<li><p>①执行main函数的开头部分</p>
+</li>
+<li><p>②遇到函数调用语句，调用a函数，流程转进a函数</p>
+</li>
+<li><p>③执行a函数的开头部分</p>
+</li>
+<li><p>④遇到函数调用语句，调用b函数，流程转进b函数</p>
+</li>
+<li><p>⑤执行b函数，如果再无其他嵌套的函数，则完成b函数的全部操作</p>
+</li>
+<li><p>⑥返回到a函数调用函数b的位置</p>
+</li>
+<li><p>⑦继续执行a函数的尚未执行部分，知道a函数结束</p>
+</li>
+<li><p>⑧返回main函数中调用a函数的位置</p>
+</li>
+<li><p>⑨继续执行main函数的剩余部分直到结束</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180412.png" srcset="/img/loading.gif" lazyload alt="函数嵌套调用"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="6-函数的递归调用（难点）"><a href="#6-函数的递归调用（难点）" class="headerlink" title="6.函数的递归调用（难点）"></a>6.函数的递归调用（难点）</h4><ol>
+<li><p>定义：在调用一个函数的过程中又出现直接或间接的调用该函数本身，称为函数的递归调用</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180423.png" srcset="/img/loading.gif" lazyload alt="函数递归调用"></p>
+</li>
+<li><p>使用递归调用时需要设置返回条件，否则容易造成无限递归造成内存溢出</p>
+</li>
+</ol>
+<h4 id="7-数组作为函数参数（难点）"><a href="#7-数组作为函数参数（难点）" class="headerlink" title="7.数组作为函数参数（难点）"></a>7.数组作为函数参数（难点）</h4><ol>
+<li>数组元素作为函数参数：数组元素可以作为函数的实参，但不能作为形参，在数组元素做实参时，将实参的值赋给形参，是<strong>值传递</strong>方式，数据传递的方向是从实参到形参，单向传递。（简单来说，就是把数组元素的<strong>值</strong>，赋值给了临时申请的形参变量）</li>
+<li>一维数组名作为函数参数：使用数组名作为函数实参时，<strong>不是</strong>把数组元素的值传给形参，而是将实参数组的<strong>首元素的地址</strong>传递给形参数组，可以将理解形参数组理解为<strong>指针</strong>（指针的概念会在第八章讲到），所以实参和形参数组变量共用的同一个地址，所以在函数中对形参数组变量所做的操作等同于对实参数组变量进行操作。</li>
+<li>多维数组名作为函数参数：与一维数组类似，多维数组定义时可以省略第一维的大小说明。同样也是<strong>地址传递</strong></li>
+</ol>
+<h4 id="8-局部变量和全局变量（程序阅读和程序填空常考）"><a href="#8-局部变量和全局变量（程序阅读和程序填空常考）" class="headerlink" title="8.局部变量和全局变量（程序阅读和程序填空常考）"></a>8.局部变量和全局变量（程序阅读和程序填空常考）</h4><ol>
+<li>局部变量：在一个函数或者复合语句内部定义的变量，成为局部变量。它只能被定义的函数或者复合语句内部被引用。<ul>
+<li>不同函数可以使用同名的变量，互不干扰。</li>
+<li>形式参数也是局部变量</li>
+<li>大括号可以作为一个便于记忆的局部范围定义的符号，在每个大括号内定义的变量只能在此大括号中有效，除了大括号便无效了。</li>
+</ul>
+</li>
+<li>全局变量：在函数之外定义的变量，称为外部变量，外部变量是全局变量。全局变量可以被被定义源文件内的其他函数所引用。<ul>
+<li>因为文件中的所有函数都可以引用全局变量，所以任何一个函数改变的全局变量的值，就能影响到其他函数中该全局变量的值。</li>
+<li>因为函数只能有一个返回值，全局变量的特性就能让函数调用返回更多的值。</li>
+<li>C程序习惯将全局变量首字母大写以便区分</li>
+<li>因为全局变量从创建之后的执行过程中都占用存储单元，并且会使函数的通用性降低，全局变量过多会降低程序的清晰性，因此不在必要时不要使用全局变量</li>
+</ul>
+</li>
+<li>如果程序中存在同名的全局变量和局部变量，在局部变量定义的大括号范围内，全局变量被屏蔽（当做不存在），局部变量有效。此时对该局部变量进行修改不会影响全局变量的值。（原因是全局变量和局部变量存放的位置不同，虽然同名但是并不是同一个内存单元）</li>
+</ol>
+<h4 id="9-变量的存储方式和生存期（了解）"><a href="#9-变量的存储方式和生存期（了解）" class="headerlink" title="9.变量的存储方式和生存期（了解）"></a>9.变量的存储方式和生存期（了解）</h4><ol>
+<li>从变量值存在的时间（即生存期）来区分，变量的存储方式可以分为动态存储和静态存储。</li>
+<li>不同存储区变量存放情况，详见书本7.9.1</li>
+<li>在C语言中，每个变量和函数除了数据类型外，还有数据的存储类型，可以分为：自动的（auto）、静态的（static）、寄存器的（register）、外部的（extern）</li>
+<li><strong>（程序阅读和程序填空会考）</strong> 静态局部变量（static）：有时希望函数中的局部变量的值在函数调用结束后不消失，继续保持原先的值，即其占用的存储单元不释放，在下一次再调用该函数时，该变量已有值（上次调用结束时的值），这时可以指定该局部变量为静态局部变量，使用关键字<strong>static</strong>进行声明。（其他类型局部变量和存储方式请自行了解）<ul>
+<li>静态局部变量属于静态存储类别，在静态存储区内分配存储单元，在整个程序运行期间都不释放。</li>
+<li>对静态局部变量在编译时赋初值的，只赋初值一次，以后每次调用不再重新赋初值而是保留上次函数调用结束时的值。</li>
+<li>如果在定义静态局部变量时不赋初值，则编译时自动为他赋初值0或’\0’</li>
+<li>虽然静态局部变脸在函数调用结束之后仍然存在，但是其它函数不能调用它，因为他是局部变量，他的作用于只在定义他的大括号内。</li>
+</ul>
+</li>
+</ol>
+<h4 id="10-内部函数和外部函数（了解）"><a href="#10-内部函数和外部函数（了解）" class="headerlink" title="10.内部函数和外部函数（了解）"></a>10.内部函数和外部函数（了解）</h4><ol>
+<li>内部函数：在定义函数时，前面加上“static”，即定义为内部函数，内部函数只能被本程序文件中的其它函数所所调用。</li>
+<li>外部函数：在定义函数时，前面加上“extern”，即定义外部函数，“extern”可以省略，所以我们平时定义的函数都是外部函数。</li>
+</ol>
+<h3 id="第八章-善于利用指针（重要、难点）"><a href="#第八章-善于利用指针（重要、难点）" class="headerlink" title="第八章 善于利用指针（重要、难点）"></a>第八章 善于利用指针（重要、难点）</h3><h4 id="1-指针是什么"><a href="#1-指针是什么" class="headerlink" title="1.指针是什么"></a>1.指针是什么</h4><ol>
+<li>指针==地址？：在C语言中定义变量，系统会在编译时根据变量的类型给变量分配存储空间，而在内存区中的每一个字节都有一个编号，这就是<strong>地址</strong>。通过这个地址就可以找到对应的存储单元，所以可以说<strong>地址指向了变量单元</strong>，所以地址被形象的称为<strong>指针</strong>，并且C语言中的地址是<strong>带类型的地址</strong>，所以在C语言中，地址就是指针。</li>
+<li>变量地址和变量值的区别：简单来说，变量的地址指的是该变量在内存中存储的位置的地址，相当于酒店里的房间号；而变量的值，则是存放在这块内存单元中的值，相当于酒店房间里住的人。C语言中对变量的访问都是通过地址来进行的。</li>
+<li>直接访问和间接访问：<ul>
+<li>直接访问：直接通过变量名进行访问。</li>
+<li>间接访问：将变量i的地址存放在另一边变量中，然后通过该变量来找到变量i，从而访问i的值。</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-指针变量"><a href="#2-指针变量" class="headerlink" title="2.指针变量"></a>2.指针变量</h4><ol>
+<li>指针变量：在间接访问时，专门用来存放变量地址的变量就是<strong>指针变量</strong>，指针变量的值是<strong>地址</strong>。变量之间通过地址来体现<strong>指向</strong>关系，例如，变量p存放了变量a的地址，那么就可以说变量p指向了变量a。</li>
+<li>指针变量的定义：<em>*类型名 *指针变量名；**，例<code>int *pointer;</code>。左边的int是在定义指针时必须指定的</em>*基类型**，通过该基类型来指定此指针变量可以用来指向哪个类型的变量。初始化：<code>int a = 1; int *pointer = &amp;a;</code></li>
+<li>定义指针变量时，变量名前面的<code>*</code>用来代表该变量为指针变量。而指针变量的名字是不带<code>*</code>的。所以引用时应该这样<code>pointer=&amp;a;</code></li>
+<li>定义指针变量时一定要指定基类型，因为C语言的地址是带类型的地址，并不只有存储单元编号的纯地址的意义，还有指向的存储单元的数据类型的信息。</li>
+<li>指针变量只能存放地址，不能直接给指针变量赋整数值。</li>
+<li>**&amp;**取地址符：这个符号在前面章节讲到过，叫做取地址符，对指针变量赋值就需要用这个符号，例如<code>pointer=&amp;a;</code></li>
+</ol>
+<h4 id="3-引用指针变量"><a href="#3-引用指针变量" class="headerlink" title="3.引用指针变量"></a>3.引用指针变量</h4><ol>
+<li>给指针变量赋值：<code>pointer=&amp;a;</code></li>
+<li>引用指针变量指向的变量：<code>int *pointer = &amp;a; printf(&quot;%d&quot;, *pointer);</code>，其作用是以整数形式输出指针变量pointer指向的整型变量a的值；如果有<code>*pointer = 1;</code>语句，表示将整数1赋值给指针变量pointer指向的整型变量a，即<code>a = 1;</code>。</li>
+<li>*****指针运算符：用于定义指针变量和对指针变量进行引用。</li>
+<li>引用指针变量的值：<code>printf(&quot;%o&quot;, pointer);</code>，作用是以八进制数的形式输出指针变量pointer的值，如果pointer指向了变量a，那么就是输出变量a的地址。</li>
+</ol>
+<h4 id="4-指针变量作为函数参数"><a href="#4-指针变量作为函数参数" class="headerlink" title="4.指针变量作为函数参数"></a>4.指针变量作为函数参数</h4><ol>
+<li>使用指针变量作为函数的参数，可以将变量的<strong>地址</strong>传送到另一个函数中。<strong>可以理解为将酒店的房间号告诉了另一个函数，则另一个函数对这个房间做的改动就是对这个房间本身做的改动。</strong></li>
+<li>如何实现<strong>通过调用函数使变量的值发生变化，在主调函数中可以使用这些改变了的值</strong>，可以看下8.2.4的例8.3，是很经典的指针应用。</li>
+<li>函数调用可以返回一个返回值，而使用指针变量做参数，就可以得到多个变化了的值，这也是指针变量的一大作用。</li>
+</ol>
+<h4 id="5-通过指针引用数组"><a href="#5-通过指针引用数组" class="headerlink" title="5.通过指针引用数组"></a>5.通过指针引用数组</h4><ol>
+<li>数组元素的指针：每一个变量都有地址，数组中的元素也不例外，那么指针变量也就可以指向数组元素。数组元素的指针就是数组元素的地址。</li>
+<li>数组元素可以使用下标法进行引用，如<code>a[2]</code>；也可以使用指针法，如<code>*a</code>、<code>*(a+2)</code>;实际上在编译时，<code>a[2]</code>就是被处理成<code>*(a+2)</code>，即数组首元素地址加上偏移量，<code>[]</code>被称为变址运算符。</li>
+<li>指针的算术运算：<ul>
+<li>加一个整数：p+1，即指向同一数组中的下一个元素。<strong>注意：</strong>这里的+1并不是简单的在指针的值上+1，而是<strong>加上一个数组元素的字节数</strong>，例如是int类型的数组，则增加4个字节，这个增加的字节数便是通过指定指针变量时的<strong>基类型</strong>获得的。</li>
+<li>减一个整数：p-1，即指向同一数组中的上一个元素</li>
+<li>自增：p++；++p</li>
+<li>自减：p–；–p</li>
+<li>两个指针相减：p1-p2（当p1、p2指向同一个数组时才有意义），得到的值是两个地址之差除以数组元素的长度，也就是两个元素之间差了几个元素，即数组元素的相对距离。</li>
+</ul>
+</li>
+<li>虽然可以通过数组名a使用指针法来引用数组元素，但是数组名其实是一个指针型<strong>常量</strong>，它在程序运行期间是不能被修改值的，所以不能像指针变量一样修改数组名指向的目标。</li>
+</ol>
+<h4 id="6-数组名作为函数参数"><a href="#6-数组名作为函数参数" class="headerlink" title="6.数组名作为函数参数"></a>6.数组名作为函数参数</h4><ol>
+<li>在使用数组名作为函数参数时，C语言默认将形参数组名作为指针变量来处理，<code>fun(int a[])</code>和<code>fun(int *a)</code>两种写法其实是等价的，所以在函数中对应参数组进行的改动其实就是对主调函数中传入的实参数组进行改动。</li>
+</ol>
+<h4 id="7-通过指针引用多维数组（难点）"><a href="#7-通过指针引用多维数组（难点）" class="headerlink" title="7.通过指针引用多维数组（难点）"></a>7.通过指针引用多维数组（难点）</h4><ol>
+<li></li>
+</ol>
+<p><strong>更新ing…</strong></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%80%83%E7%A0%94/">考研</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1012/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">我的足迹地图</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/1011/">
+                        <span class="hidden-mobile">记一次沈阳出差</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appKey":"n3741pPIzE7tCh989HOf2pwX","path":"window.location.pathname","placeholder":"说点什么","avatar":"identicon","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appkey":"n3741pPIzE7tCh989HOf2pwX","verify":true,"visitor":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <span>darkbin</span> <i class="iconfont icon-love"></i> <a href="https://github.com/darkbin432" target="_blank" rel="nofollow noopener"><span>GitHub</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?197a09e7bb174821fb31a81f460ec38e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

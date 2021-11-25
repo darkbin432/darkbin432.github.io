@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="darkbin">
+  <meta name="keywords" content="">
+  <meta name="description" content="标题构建临床决策支持系统的良性生态 信息刘海一. “构建临床决策支持系统的良性生态.” 中国数字医学 16.3(2021):7. Author：刘海一 IF: - Cited: 1 Ref: 6 摘要在电子病历得到应用后，临床决策支持系统（CDSS）是进一步提升医疗安全与质量的重要手段。但是当前CDSS的应用却遇到许多困难。文章根据我国当前电子病历应用水平评估的情况归纳了临床决策支持应用的6种类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文整理（五） 构建临床决策支持系统的良性生态">
+<meta property="og:url" content="https://blog.darkbin.icu/posts/1023/index.html">
+<meta property="og:site_name" content="darkbin&#39;s blog">
+<meta property="og:description" content="标题构建临床决策支持系统的良性生态 信息刘海一. “构建临床决策支持系统的良性生态.” 中国数字医学 16.3(2021):7. Author：刘海一 IF: - Cited: 1 Ref: 6 摘要在电子病历得到应用后，临床决策支持系统（CDSS）是进一步提升医疗安全与质量的重要手段。但是当前CDSS的应用却遇到许多困难。文章根据我国当前电子病历应用水平评估的情况归纳了临床决策支持应用的6种类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211124143050.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211124143237.png">
+<meta property="article:published_time" content="2021-11-24T06:38:39.000Z">
+<meta property="article:modified_time" content="2021-11-24T06:40:14.000Z">
+<meta property="article:author" content="darkbin">
+<meta property="article:tag" content="论文">
+<meta property="article:tag" content="电子病历">
+<meta property="article:tag" content="CDSS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211124143050.png">
+  
+  <title>论文整理（五） 构建临床决策支持系统的良性生态 - darkbin&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/xcode.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>darkbin&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180701.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="论文整理（五） 构建临床决策支持系统的良性生态">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      darkbin
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-24 14:38" pubdate>
+        星期三, 十一月 24日 2021, 2:38 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">论文整理（五） 构建临床决策支持系统的良性生态</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：星期三, 十一月 24日 2021, 2:40 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>构建临床决策支持系统的良性生态</p>
+<h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><p>刘海一. “构建临床决策支持系统的良性生态.” 中国数字医学 16.3(2021):7.</p>
+<p>Author：刘海一</p>
+<p>IF: -</p>
+<p>Cited: 1</p>
+<p>Ref: 6</p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>在电子病历得到应用后，临床决策支持系统（CDSS）是进一步提升医疗安全与质量的重要手段。但是当前CDSS的应用却遇到许多困难。文章根据我国当前电子病历应用水平评估的情况归纳了临床决策支持应用的6种类型和5种常见的应用场景，分析了技术上促进CDSS应用需要解决的4个主要问题，提出了以优先解决电子病历系统与CDSS接口的标准化作为入手推动临床决策支持应用的方案。通过扩大CDSS的应用带动知识描述标准的建立，进而引导市场化方式发展通用的知识库，由此形成临床决策支持系统良性发展的生态。</p>
+<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><p>临床决策支持、电子病历、数据共享、接口标准</p>
+<h4 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p><strong>CDS：</strong></p>
+<ol>
+<li>为医务工作者、病人或个人提供知识、特定个人或人群信息，目的是提供更好的健康、诊疗和公共卫生服务 —— AMIA美国医学信息学会</li>
+<li>用密切相关、组织得当的临床知识和病人信息改进卫生和医疗服务 —— HIMMS美国医疗卫生信息管理系统协会</li>
+</ol>
+<p><strong>CDSS：</strong>是一类运用计算机化的医学知识，结合病人信息进行推理，辅助医疗决策、提高医疗水平和服务质量的计算机系统</p>
+<h5 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h5><ol>
+<li>根据中国医院信息专委会2019-2020年进行的中国医院信息化状况调查显示[1]，在所调查的1100多所大型医院中绝大部分医院都应用了智能化系统，未使用任何智能系统的医院仅占11.90%。</li>
+<li>所应用的智能化系统主要包括合理用药检查、临床辅助诊断、病案质量辅助审核、医疗保险辅助审核、诊疗方案自动推荐等，其中合理用药检查应用的占比最高为85.94%。</li>
+<li>在2018版修订的标准[1]0～8级的九个级别中，4级及以上的级别均要求有决策支持功能。在2019年度的电子病历分级评估的7870所医院中，达到4级及以上级别的医院仅占14.40%，绝大部分医院智能化应用的功能未达到要求。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211124143050.png" srcset="/img/loading.gif" lazyload alt="智能化功能应用情况"></p>
+<h5 id="应用环境"><a href="#应用环境" class="headerlink" title="应用环境"></a>应用环境</h5><ol>
+<li>一方面是CDSS与各厂商的电子病历进行整合，从中及时全面地获取决策判断所需要的患者信息。构建良好的生态就意味着CDSS与电子病历系统之间要有通用的信息规范与接口标准，这样CDSS就不必针对每个对接的电子病历系统开发专门的数据接口。</li>
+<li>另一方面是CDSS中所应用的知识库能够汇集社会力量进行持续地汇总补充，形成一种“众筹”的机制使知识能够不断积累和完善。知识的完善同样也需要一种描述知识的规范与标准，通过这种标准“众筹”的知识才能够实现通用和共享。 </li>
+</ol>
+<h5 id="电子病历系统、CDSS与知识库的关联关系"><a href="#电子病历系统、CDSS与知识库的关联关系" class="headerlink" title="电子病历系统、CDSS与知识库的关联关系"></a>电子病历系统、CDSS与知识库的关联关系</h5><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211124143237.png" srcset="/img/loading.gif" lazyload alt="电子病历系统、CDSS与知识库的关联关系"></p>
+<h5 id="CDSS应用类型"><a href="#CDSS应用类型" class="headerlink" title="CDSS应用类型"></a>CDSS应用类型</h5><ol>
+<li>提醒与警告</li>
+<li>信息查询</li>
+<li>智能模板</li>
+<li>诊疗计划</li>
+<li>病历展示</li>
+<li>数据分析和识别</li>
+</ol>
+<h5 id="CDSS应用场景"><a href="#CDSS应用场景" class="headerlink" title="CDSS应用场景"></a>CDSS应用场景</h5><ol>
+<li>查看病历</li>
+<li>下达医嘱、申请检查检验</li>
+<li>查看各类检查检验报告</li>
+<li>书写病历</li>
+<li>写报告、观察记录</li>
+</ol>
+<h5 id="通用的CDSS需要解决的问题"><a href="#通用的CDSS需要解决的问题" class="headerlink" title="通用的CDSS需要解决的问题"></a>通用的CDSS需要解决的问题</h5><ol>
+<li>有通用的患者数据接口，可以与各种不同的电子病历连接获得所需的患者数据，通过这些数据实现辅助决策与个人情况关联，同时也能够获取过滤信息的条件。</li>
+<li>具备有效的知识或信息展示方式与展示规范，使所展现的信息或知识能够便于使用者接受与理解，帮助使用者更好的做出正确的决策。</li>
+<li>知识能够应用统一的格式标准记录，使CDSS能够采用同一种方法利用从不同来源获得的知识。</li>
+<li>有统一的各类知识描述方式，所有来源的知识都能够汇总在一起，使知识库不断得到补充与完善，知识内容也能够不断深入细化。</li>
+</ol>
+<h5 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h5><p>我国目前临床决策支持系统的设计、开发还处于初级阶段，为了能够更加优质与高效地发展，同样也需要制定一套适合我国特色的发展路径。<strong>患者数据的通用接口、CDSS功能与输出的规范化、知识库的标准化与可持续更新</strong>三个方面是目前提高系统开发效率、降低应用成本、提升知识库质量的重要内容。<br>目前由于缺乏可实际应用的相关规范与标准，对于临床决策支持系统开发商遇到了与电子病历系统连接成本高、知识内容开发成本高等问题，对于用户则同样遇到电子病历系统与CDSS连接困难、互换性差、知识内容缺乏等问题。在诸多问题中，首先需要解决的是<strong>CDSS与电子病历系统之间的接口标准问题</strong>，一旦这个问题得到解决，则临床决策支持系统的应用将能够大大往前推进。应用的增加也能够促进市场规模的扩大，反过来刺激更多知识库来源加入到这个生态中。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%BA%E6%96%87/">论文</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%94%B5%E5%AD%90%E7%97%85%E5%8E%86/">电子病历</a>
+                    
+                      <a class="hover-with-bg" href="/tags/CDSS/">CDSS</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/1022/">
+                        <span class="hidden-mobile">SpringCloud牛刀小试</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appKey":"n3741pPIzE7tCh989HOf2pwX","path":"window.location.pathname","placeholder":"说点什么","avatar":"identicon","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appkey":"n3741pPIzE7tCh989HOf2pwX","verify":true,"visitor":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <span>darkbin</span> <i class="iconfont icon-love"></i> <a href="https://github.com/darkbin432" target="_blank" rel="nofollow noopener"><span>GitHub</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?197a09e7bb174821fb31a81f460ec38e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

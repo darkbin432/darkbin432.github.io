@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="darkbin">
+  <meta name="keywords" content="">
+  <meta name="description" content="标题Deep Learning for Health Informatics健康信息学中的深度学习 信息IEEE J Biomed Health Inform. 2017 Jan;21(1):4-21. doi: 10.1109&#x2F;JBHI.2016.2636665. Epub 2016 Dec 29. Author：Daniele Ravi, Charence Wong, Fani Deligia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文整理（一） 健康信息学中的深度学习">
+<meta property="og:url" content="https://blog.darkbin.icu/posts/1016/index.html">
+<meta property="og:site_name" content="darkbin&#39;s blog">
+<meta property="og:description" content="标题Deep Learning for Health Informatics健康信息学中的深度学习 信息IEEE J Biomed Health Inform. 2017 Jan;21(1):4-21. doi: 10.1109&#x2F;JBHI.2016.2636665. Epub 2016 Dec 29. Author：Daniele Ravi, Charence Wong, Fani Deligia">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221042.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221149.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221421.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221531.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221810.png">
+<meta property="article:published_time" content="2021-10-09T14:20:30.000Z">
+<meta property="article:modified_time" content="2021-10-31T11:30:10.000Z">
+<meta property="article:author" content="darkbin">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="论文">
+<meta property="article:tag" content="Deep Learning">
+<meta property="article:tag" content="Health Informatics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221042.png">
+  
+  <title>论文整理（一） 健康信息学中的深度学习 - darkbin&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/xcode.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>darkbin&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180701.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="论文整理（一） 健康信息学中的深度学习">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      darkbin
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-09 22:20" pubdate>
+        星期六, 十月 9日 2021, 10:20 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">论文整理（一） 健康信息学中的深度学习</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：星期日, 十月 31日 2021, 7:30 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>Deep Learning for Health Informatics<br>健康信息学中的深度学习</p>
+<h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><p>IEEE J Biomed Health Inform. 2017 Jan;21(1):4-21. doi: 10.1109/JBHI.2016.2636665. Epub 2016 Dec 29.</p>
+<p>Author：Daniele Ravi, Charence Wong, Fani Deligianni, Melissa Berthelot, Javier Andreu-Perez, Benny Lo, Guang-Zhong Yang</p>
+<p>IF: 4.2170</p>
+<p>Cited: 139</p>
+<p>Ref: 145</p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>随着多模态数据的大量涌入，数据分析在卫生信息学中的作用在过去十年中迅速增长。这也促使人们杜基于机器学习的健康信息学分析、数据驱动模型的产生越来越感兴趣。深度学习是一种以人工神经网络为基础的技术，近年来作为机器学习的有力工具而兴起，有望重塑人工智能的未来。计算能力、快速数据存储和并行化的快速提高，除了提升其预测能里和从输入数据到生成自动优化的高级特征和语义解释的能力外，还促进了该技术的快速应用。这篇文章介绍了一个全面的最新的在卫生信息学领域应用深度学习的研究回顾，并对于这种技术的相对的优势、潜在的缺陷及对未来的展望作了一个批判性的分析。本文主要关注深度学习在转化生物信息学、医学成像爱那个、普适传感、医学信息学和公共卫生领域的关键应用。</p>
+<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><p>生物信息学、深度学习、健康信息学、机器学习、医学成像、公共卫生、可穿戴设备</p>
+<h4 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h4><h5 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h5><ol>
+<li>近年来，人们对深度学习的兴趣急剧上升，在健康信息学子领域发表的论文数量包括生物信息学、医学成像、普适传感、医学信息学和公共卫生。</li>
+<li>到目前为止，大量的实验工作已经实现了健康信息学的深度学习模型，达到了类似甚至在许多情况下超过了替代技术的性能。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221042.png" srcset="/img/loading.gif" lazyload alt="在卫生信息学分区使用深度学习的已发表论文的分布"></p>
+<h5 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h5><ol>
+<li>自动编码机（Autoencoders）和深度自动编码机（Deep Autoencoders）</li>
+<li>循环神经网络（RNN）</li>
+<li>基于受限玻尔兹曼机的技术：深度信念网络（DBN）、深度玻尔兹曼机（DBM）</li>
+<li>卷积神经网络（CNN）</li>
+<li>软硬件实现</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221149.png" srcset="/img/loading.gif" lazyload alt="没有深层结构的简单NNs示意图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221421.png" srcset="/img/loading.gif" lazyload alt="不同深度学习架构的介绍"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221531.png" srcset="/img/loading.gif" lazyload alt="提供DNNs实现的流行软件包"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211009221810.png" srcset="/img/loading.gif" lazyload alt="按区域和应用分类的不同深度学习方法总结"></p>
+<h5 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h5><ol>
+<li>转化生物信息学</li>
+<li>医学影像学中的深度学习</li>
+<li>对健康和福祉的普遍感知</li>
+<li>医学信息学</li>
+<li>公共卫生领域</li>
+</ol>
+<h5 id="局限和挑战"><a href="#局限和挑战" class="headerlink" title="局限和挑战"></a>局限和挑战</h5><ol>
+<li>整个深度学习模型通常无法解释。大多数研究人员将深度学习方法作为一个黑匣子来使用，无法解释为什么它能提供良好的结果，也无法在出现错误分类问题的情况下进行修改。</li>
+<li>为了训练可靠有效的模型，需要大量的训练数据来表达新概念，但特定疾病的数据通常是有限的。因此，并非所有应用程序，特别是罕见疾病或事件，都适合深度学习，容易出现过拟合现象。</li>
+<li>原始数据不能直接用作DNN的输入。因此，训练前往往需要对输入域进行预处理、规范化或更改。此外，设置控制DNN结构的许多超参数，仍然是一个盲探索过程，通常需要精确验证。找到正确的数据预处理和最优超参数集可能具有挑战性，因为这会使训练过程更长，需要大量的训练资源和人力资源。</li>
+<li>许多深度学习的方法会被“愚弄”。例如，可以向输入样本添加小的变化（例如图像中的不可察觉的噪声）以导致样本被错误分类，几乎所有的机器学习算法都容易受到此类问题的影响。这也是深度学习范式的一个真正限制，但对于其他机器学习算法也是一个缺点。</li>
+</ol>
+<h5 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h5><ol>
+<li>概述了深度学习是如何通过允许自动生成功能来减少这一过程中的人为干预量，从而在卫生信息学中实现更多数据驱动解决方案的开发的。</li>
+<li>深度学习与人工智能相结合的稳健推理可以提高临床决策支持系统的可靠性。</li>
+<li>一些技术挑战仍有待解决。患者和临床数据的获取成本很高，健康对照个体代表了标准健康数据集的很大一部分。另一个担忧是，深度学习主要依赖于大量的训练数据。这些要求使得机器学习的传统入门障碍，即数据可用性和隐私，变得更加关键。</li>
+<li>深度学习为神经网络和连接主义提供了一个积极的复兴，它将协处理器所支持的并行处理的最新进展真正整合起来。尽管如此，健康信息学研究持续集中于深度学习可能会减缓新机器学习算法的发展，从而更自觉地利用计算资源和可解释性。</li>
+</ol>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Machine-Learning/">Machine Learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%BA%E6%96%87/">论文</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Deep-Learning/">Deep Learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Health-Informatics/">Health Informatics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1017/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">论文整理（二） 基于无监督深度学习的变分自编码COVID-19诊断和分类模型</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/1015/">
+                        <span class="hidden-mobile">CMAI听会报告-AI在心脏MR检查与诊断中的应用-夏黎明</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appKey":"n3741pPIzE7tCh989HOf2pwX","path":"window.location.pathname","placeholder":"说点什么","avatar":"identicon","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appkey":"n3741pPIzE7tCh989HOf2pwX","verify":true,"visitor":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <span>darkbin</span> <i class="iconfont icon-love"></i> <a href="https://github.com/darkbin432" target="_blank" rel="nofollow noopener"><span>GitHub</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?197a09e7bb174821fb31a81f460ec38e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
