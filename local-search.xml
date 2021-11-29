@@ -12,6 +12,16 @@
     
     
     
+    <tags>
+      
+      <tag>M1</tag>
+      
+      <tag>Macbook</tag>
+      
+      <tag>软件分享</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -96,9 +106,9 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>NLP</tag>
-      
       <tag>论文</tag>
+      
+      <tag>NLP</tag>
       
     </tags>
     
@@ -167,13 +177,13 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>论文</tag>
-      
       <tag>Deep Learning</tag>
       
-      <tag>Unsupervised Learning</tag>
+      <tag>论文</tag>
       
       <tag>COVID-19</tag>
+      
+      <tag>Unsupervised Learning</tag>
       
     </tags>
     
@@ -194,11 +204,11 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>论文</tag>
-      
       <tag>Deep Learning</tag>
       
       <tag>Health Informatics</tag>
+      
+      <tag>论文</tag>
       
     </tags>
     
