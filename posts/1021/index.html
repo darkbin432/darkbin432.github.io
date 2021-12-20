@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180919.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20210930180919.jpg">
+  <link rel="icon" href="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20210930180919.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -23,34 +23,34 @@
 <meta property="og:site_name" content="今天你学习了吗？">
 <meta property="og:description" content="前言因为习惯用markdown来写文档之后经常会出现：发一个markdown文件给别人，结果对方说图片看不见，发现图片粘进去的是本地路径。因此打算做一个自己的图床，使用了Typora自带的插入图片时上传图片的功能，配合PicGo-Core和Github，搭建了自己的图床。 说明：  配置PicGo-Core需要需安装 NodeJs 环境，可自行百度 使用Github可能会出现图片加载慢的问题，可以">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214542.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214636.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214825.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214953.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102215034.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102215328.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214542.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214636.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214825.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214953.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102215034.png">
+<meta property="og:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102215328.png">
 <meta property="article:published_time" content="2021-11-02T14:03:55.000Z">
-<meta property="article:modified_time" content="2021-11-02T14:19:20.000Z">
+<meta property="article:modified_time" content="2021-12-20T08:02:46.795Z">
 <meta property="article:author" content="darkbin">
 <meta property="article:tag" content="搭建">
 <meta property="article:tag" content="图床">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214542.png">
+<meta name="twitter:image" content="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214542.png">
   
   
   <title>Typora + PicGo-Core + Github 搭建个人图床 - 今天你学习了吗？</title>
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" />
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/xcode.min.css" />
+      <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/xcode.min.css" />
     
   
 
@@ -179,7 +179,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930180701.jpg') no-repeat center center;
+         style="background: url('https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20210930180701.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -260,7 +260,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：星期二, 十一月 2日 2021, 10:19 晚上
+                  本文最后更新于：星期一, 十二月 20日 2021, 4:02 下午
                 
               </p>
             
@@ -272,16 +272,16 @@
 <li>使用Github可能会出现图片加载慢的问题，可以使用CDN加速或者使用Gitee来搭建图床</li>
 </ol>
 <h3 id="一、GItHub仓库设置"><a href="#一、GItHub仓库设置" class="headerlink" title="一、GItHub仓库设置"></a>一、GItHub仓库设置</h3><h4 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1.新建仓库"></a>1.新建仓库</h4><p>像下图一样操作，注意一定要是 <strong>Public</strong>，并且 <em>Add a README file</em>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214542.png" srcset="/img/loading.gif" lazyload alt="新建仓库"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214542.png" srcset="/img/loading.gif" lazyload alt="新建仓库"></p>
 <h4 id="2-生成token"><a href="#2-生成token" class="headerlink" title="2.生成token"></a>2.生成token</h4><p>在 <em>GitHub</em> 的 <code>Settings/Developer settings</code> 中选择 <code>Personal access tokens</code>生成 token，这个 token 是用来给 <em>PicGo-Core</em> 访问你的 <em>GitHub</em> 并且上传图片的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214636.png" srcset="/img/loading.gif" lazyload alt="生成token"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214636.png" srcset="/img/loading.gif" lazyload alt="生成token"></p>
 <h3 id="二、安装-PicGO-Core"><a href="#二、安装-PicGO-Core" class="headerlink" title="二、安装 PicGO-Core"></a>二、安装 PicGO-Core</h3><h4 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1.下载安装"></a>1.下载安装</h4><p>直接在 <code>Typora</code> 中 <code>偏好设置-&gt;图像</code> 的上传服务中选择 <code>PicGo-Core(command line）</code>然后点击 <code>下载或更新</code> ，等待下载即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214825.png" srcset="/img/loading.gif" lazyload alt="安装 PicGO-Core"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214825.png" srcset="/img/loading.gif" lazyload alt="安装 PicGO-Core"></p>
 <h4 id="2-配置PicGo-Core"><a href="#2-配置PicGo-Core" class="headerlink" title="2.配置PicGo-Core"></a>2.配置PicGo-Core</h4><p>安装好之后，还需要下载上传 <em>GitHub</em> 的插件 <em>github-plus</em>，这一步不是必须的，但是官方提供的 <em>GitHub</em> 上传图床功能并不好用，嫌麻烦可以不进行这一步。</p>
 <p>点击图中的 <code>验证图片上传选项</code>，这是 <em>Typora</em> 通过上传两种图片来验证上传功能是否正确，在这里是用来找到 <em>PicGo-Core</em> 的安装位置。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102214953.png" srcset="/img/loading.gif" lazyload alt="验证图片上传选项"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102214953.png" srcset="/img/loading.gif" lazyload alt="验证图片上传选项"></p>
 <p>下图中的 <code>C:\Users\luowb\AppData\Roaming\Typora\picgo\win64\picgo.exe</code> 就是 <em>PicGo-Core</em> 的安装路径。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102215034.png" srcset="/img/loading.gif" lazyload alt="PicGo-Core的安装路径"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102215034.png" srcset="/img/loading.gif" lazyload alt="PicGo-Core的安装路径"></p>
 <p>打开 <em>cmd</em>，运行</p>
 <figure class="highlight taggerscript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs taggerscript">cd C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\你</span>的用户名<span class="hljs-symbol">\A</span>ppData<span class="hljs-symbol">\R</span>oaming<span class="hljs-symbol">\T</span>ypora<span class="hljs-symbol">\p</span>icgo<span class="hljs-symbol">\w</span>in64<br></code></pre></div></td></tr></table></figure>
 
@@ -293,7 +293,7 @@
 <li><strong>上传服务</strong>选择<code>PicGo-Core(command line)</code></li>
 <li>打开配置文件，在打开的配置文件，添加相关信息。</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211102215328.png" srcset="/img/loading.gif" lazyload alt="设置 PicGo 的配置"></p>
+<p><img src="https://raw.githubusercontents.com/darkbin432/ImageHost/main/images/20211102215328.png" srcset="/img/loading.gif" lazyload alt="设置 PicGo 的配置"></p>
 <figure class="highlight json"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs json">&#123;<br> <span class="hljs-attr">&quot;picBed&quot;</span>: &#123;<br>   <span class="hljs-attr">&quot;uploader&quot;</span>: <span class="hljs-string">&quot;githubPlus&quot;</span>,<br>   <span class="hljs-attr">&quot;current&quot;</span>: <span class="hljs-string">&quot;githubPlus&quot;</span>,<br>   <span class="hljs-attr">&quot;githubPlus&quot;</span>: &#123;<br>     <span class="hljs-attr">&quot;branch&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>,<span class="hljs-comment">// 仓库的分支</span><br>     <span class="hljs-attr">&quot;customUrl&quot;</span>: <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/用户名/仓库名@latest&quot;</span>, <span class="hljs-comment">// 访问的自定义url</span><br>     <span class="hljs-attr">&quot;origin&quot;</span>: <span class="hljs-string">&quot;github&quot;</span>, <span class="hljs-comment">// 存放的图片类型</span><br>     <span class="hljs-attr">&quot;repo&quot;</span>: <span class="hljs-string">&quot;用户名/仓库名&quot;</span>, <span class="hljs-comment">// 存放图片的仓库</span><br>     <span class="hljs-attr">&quot;path&quot;</span>: <span class="hljs-string">&quot;images&quot;</span>,<span class="hljs-comment">// 仓库中存放图片的文件夹，也可以不填</span><br>     <span class="hljs-attr">&quot;token&quot;</span>: <span class="hljs-string">&quot;&quot;</span> <span class="hljs-comment">// 访问github的仓库的token，就是一开始生成的</span><br>   &#125;<br> &#125;,<br> <span class="hljs-attr">&quot;picgoPlugins&quot;</span>: &#123;<br>   <span class="hljs-attr">&quot;picgo-plugin-github-plus&quot;</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">// 启用github-plus插件</span><br> &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
 
 <p>上面的 <code>customUrl</code>，在这里我是使用了 <em>jsdeliver</em> cdn 进行加速访问，如果不知道是什么，就直接按照我的配置设置，或者不填。</p>
@@ -362,7 +362,7 @@
   <div id="valine"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+      Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.4.16/Valine.min.js', function() {
         var options = Object.assign(
           {"appId":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appKey":"n3741pPIzE7tCh989HOf2pwX","path":"window.location.pathname","placeholder":"说点什么","avatar":"identicon","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"pHxJFwr91CVCfOE8xWNRqTJV-gzGzoHsz","appkey":"n3741pPIzE7tCh989HOf2pwX","verify":true,"visitor":true},
           {
@@ -484,8 +484,8 @@
 
   <!-- SCRIPTS -->
   
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -496,8 +496,8 @@
   </script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -525,10 +525,10 @@
     <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
   
   
-    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.1/anchor.min.js" ></script>
   
   
-    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" ></script>
   
 
 
@@ -538,7 +538,7 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
@@ -563,7 +563,7 @@
           inlineMath: [['$', '$'], ['\\(', '\\)']]
         },
         loader: {
-          
+          load: ['ui/lazy']
         },
         options: {
           renderActions: {
@@ -591,7 +591,7 @@
       };
     </script>
 
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
 
   
 
