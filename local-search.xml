@@ -177,13 +177,13 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>COVID-19</tag>
-      
-      <tag>论文</tag>
-      
       <tag>Deep Learning</tag>
       
       <tag>Unsupervised Learning</tag>
+      
+      <tag>COVID-19</tag>
+      
+      <tag>论文</tag>
       
     </tags>
     
@@ -204,9 +204,9 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>论文</tag>
-      
       <tag>Deep Learning</tag>
+      
+      <tag>论文</tag>
       
       <tag>Health Informatics</tag>
       
@@ -269,9 +269,9 @@
     
     <tags>
       
-      <tag>Springboot</tag>
-      
       <tag>Java</tag>
+      
+      <tag>Springboot</tag>
       
     </tags>
     
@@ -347,11 +347,11 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>Springboot</tag>
       
       <tag>Redis</tag>
-      
-      <tag>Java</tag>
       
     </tags>
     
@@ -391,9 +391,9 @@
     
     <tags>
       
-      <tag>Springboot</tag>
-      
       <tag>Java</tag>
+      
+      <tag>Springboot</tag>
       
     </tags>
     
@@ -431,9 +431,9 @@
     
     <tags>
       
-      <tag>Springboot</tag>
-      
       <tag>Java</tag>
+      
+      <tag>Springboot</tag>
       
     </tags>
     
