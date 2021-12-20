@@ -13,10 +13,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="darkbin">
   <meta name="keywords" content="">
-  <meta name="description" content="前言Springboot默认打成jar包，使用Springboot构建web应用，默认使用内置的Tomcat。但考虑到项目需要集群部署或者进行优化时，就需要打成war包部署到外部的Tomcat服务器中。 一、环境1234java: 1.8springboot: 2.1.8.RELEASEtomcat: 8.5.38IntelliJ IDEA: 2021.1.1  二、修改pom.xml文件将默认打">
+  
+    <meta name="description" content="前言Springboot默认打成jar包，使用Springboot构建web应用，默认使用内置的Tomcat。但考虑到项目需要集群部署或者进行优化时，就需要打成war包部署到外部的Tomcat服务器中。 一、环境1234java: 1.8springboot: 2.1.8.RELEASEtomcat: 8.5.38IntelliJ IDEA: 2021.1.1  二、修改pom.xml文件将默认打">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Springboot-war包方式部署">
 <meta property="og:url" content="https://blog.darkbin.icu/posts/1005/index.html">
@@ -32,6 +32,7 @@
 <meta property="article:tag" content="Springboot">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20210930174702.png">
+  
   
   <title>Springboot-war包方式部署 - 今天你学习了吗？</title>
 
@@ -70,7 +71,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.darkbin.icu","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"197a09e7bb174821fb31a81f460ec38e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -214,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11 分钟
+      29 分钟
     </span>
   
 
@@ -542,7 +543,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>
