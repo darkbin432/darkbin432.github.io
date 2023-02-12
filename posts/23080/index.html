@@ -16,25 +16,32 @@
   <meta name="author" content="darkbin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言研究生生活逐渐稳定，为了迎接接下来的学习，也将手中的电脑更新至20款的M1 MacBook Air。因为之前用的是大一买的第一代小米笔记本Air，续航已经惨不忍睹，满电到空电最快只要5分钟，这让我忍无可忍，同时我也已经对M1的Macbook垂涎已久。终于，在奖学金下发的第一时间我果断下单购入了16G+256G的M1 Macbook Air。 工欲善其事，必先利其器，经过一段时间的研究和打磨，我">
+    <meta name="description" content="前言最近在看Java八股的时候看到了RPC协议，想着看一下Dubbo上手玩一下。 一、创建Eureka注册中心 New Module创建Eureka模块      在EurekaServerApplication类中加入注解@EnableEurekaServer，声明自己为服务的注册中心   yml中的加入如下配置：registerWithEureka 和 fetchRegistry 设置为fal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="M1 Macbook实用软件整理">
-<meta property="og:url" content="https://blog.darkbin.icu/posts/13171/index.html">
+<meta property="og:title" content="Springboot + Dubbo搭建尝试">
+<meta property="og:url" content="https://blog.darkbin.icu/posts/23080/index.html">
 <meta property="og:site_name" content="今天你学习了吗？">
-<meta property="og:description" content="前言研究生生活逐渐稳定，为了迎接接下来的学习，也将手中的电脑更新至20款的M1 MacBook Air。因为之前用的是大一买的第一代小米笔记本Air，续航已经惨不忍睹，满电到空电最快只要5分钟，这让我忍无可忍，同时我也已经对M1的Macbook垂涎已久。终于，在奖学金下发的第一时间我果断下单购入了16G+256G的M1 Macbook Air。 工欲善其事，必先利其器，经过一段时间的研究和打磨，我">
+<meta property="og:description" content="前言最近在看Java八股的时候看到了RPC协议，想着看一下Dubbo上手玩一下。 一、创建Eureka注册中心 New Module创建Eureka模块      在EurekaServerApplication类中加入注解@EnableEurekaServer，声明自己为服务的注册中心   yml中的加入如下配置：registerWithEureka 和 fetchRegistry 设置为fal">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211130074910.png">
-<meta property="article:published_time" content="2021-11-29T23:51:58.000Z">
-<meta property="article:modified_time" content="2022-06-17T12:40:27.608Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215621.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215741.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211104154225.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220108.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220357.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103222351.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103221148.png">
+<meta property="article:published_time" content="2022-11-29T13:40:00.000Z">
+<meta property="article:modified_time" content="2023-02-12T15:20:54.396Z">
 <meta property="article:author" content="darkbin">
-<meta property="article:tag" content="M1">
-<meta property="article:tag" content="Macbook">
-<meta property="article:tag" content="软件分享">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Springboot">
+<meta property="article:tag" content="Dubbo">
+<meta property="article:tag" content="RPC">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211130074910.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215621.png">
   
   
-  <title>M1 Macbook实用软件整理 - 今天你学习了吗？</title>
+  <title>Springboot + Dubbo搭建尝试 - 今天你学习了吗？</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -180,7 +187,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="M1 Macbook实用软件整理">
+            <span class="h2" id="subtitle" title="Springboot + Dubbo搭建尝试">
               
             </span>
 
@@ -195,8 +202,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-11-30 07:51" pubdate>
-        星期二, 十一月 30日 2021, 7:51 早上
+      <time datetime="2022-11-29 21:40" pubdate>
+        星期二, 十一月 29日 2022, 9:40 晚上
       </time>
     </span>
   
@@ -206,7 +213,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      545 字
     </span>
   
 
@@ -215,7 +222,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12 分钟
+      5 分钟
     </span>
   
 
@@ -252,59 +259,38 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">M1 Macbook实用软件整理</h1>
+            <h1 style="display: none">Springboot + Dubbo搭建尝试</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：星期五, 六月 17日 2022, 8:40 晚上
+                  本文最后更新于：星期日, 二月 12日 2023, 11:20 晚上
                 
               </p>
             
             <div class="markdown-body">
-              <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>研究生生活逐渐稳定，为了迎接接下来的学习，也将手中的电脑更新至20款的M1 MacBook Air。因为之前用的是大一买的第一代小米笔记本Air，续航已经惨不忍睹，满电到空电最快只要5分钟，这让我忍无可忍，同时我也已经对M1的Macbook垂涎已久。终于，在奖学金下发的第一时间我果断下单购入了16G+256G的M1 Macbook Air。</p>
-<p>工欲善其事，必先利其器，经过一段时间的研究和打磨，我的Mac也逐渐顺手起来，工作学习的效率也直线提升，因此将我目前在使用的软件/工具等进行一个整理和分享。</p>
-<p>首先先推荐一个Mac软件下载网站： <a target="_blank" rel="noopener" href="https://macwk.com/">MacWk</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211130074910.png" srcset="/img/loading.gif" lazyload alt="macwk.com"></p>
-<p>这个网站有大量的Mac系统的软件（含破解），网站无广告，软件无后门，让你装软件不再像Windows那样费神。</p>
-<h3 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://www.google.cn/chrome/">Google Chrome浏览器</a></li>
-<li><a target="_blank" rel="noopener" href="https://mac.weixin.qq.com/?t=mac&lang=zh_CN">微信</a></li>
-<li><a target="_blank" rel="noopener" href="https://page.dingtalk.com/wow/z/dingtalk/default/dddownload-index?from=zebra:offline">钉钉</a>（Rosetta2）</li>
-<li><a target="_blank" rel="noopener" href="https://im.qq.com/download">QQ</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a>，最近推出正式版开始收费了，但是Beta版的也还可以用</li>
-<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/">百度网盘</a></li>
-<li><a target="_blank" rel="noopener" href="https://music.163.com/#/download">网易云音乐</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/lyswhut/lx-music-desktop">洛雪音乐助手</a>，网易云上搜不到的歌去这里搜，歌的数量还是可以的，免费无广告</li>
-<li><a target="_blank" rel="noopener" href="https://www.iina.io/">IINA</a>，比自带播放器好用的视频播放器，丝滑拖拽进度，小巧但功能并不少</li>
-<li><a target="_blank" rel="noopener" href="https://www.wps.cn/">WPS Office</a></li>
-<li><a target="_blank" rel="noopener" href="https://macwk.com/soft/microsoft-remote-desktop">Microsoft Remote Desktop</a>，远程连接服务器和windows主机，全屏之后体验就和用的本机一样丝滑</li>
-<li><a target="_blank" rel="noopener" href="https://www.todesk.com/">ToDesk</a>，出了实验室局域网之后的remote替代品，有点点延迟但也还好</li>
-<li><a target="_blank" rel="noopener" href="https://apps.apple.com/cn/app/%E5%8A%A8%E6%80%81%E5%A3%81%E7%BA%B8-dynamic-wallpaper-engine/id1453504509?mt=12">Dynamic Wallpaper</a>，动态壁纸软件，¥18</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/yuche/clashx">ClashX</a>，懂得都懂</li>
+              <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在看Java八股的时候看到了RPC协议，想着看一下Dubbo上手玩一下。</p>
+<h3 id="一、创建Eureka注册中心"><a href="#一、创建Eureka注册中心" class="headerlink" title="一、创建Eureka注册中心"></a>一、创建Eureka注册中心</h3><ol>
+<li><p>New Module创建Eureka模块</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215621.png" srcset="/img/loading.gif" lazyload alt="New Module"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215741.png" srcset="/img/loading.gif" lazyload alt="创建EurekaServer模块"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211104154225.png" srcset="/img/loading.gif" lazyload alt="选择Spring Cloud Discovery -&gt; Eureka Server"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220108.png" srcset="/img/loading.gif" lazyload alt="pom.xml中出现如下依赖"></p>
+</li>
+<li><p>在EurekaServerApplication类中加入注解@EnableEurekaServer，声明自己为服务的注册中心</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220357.png" srcset="/img/loading.gif" lazyload alt="声明服务注册中心"></p>
+</li>
+<li><p>yml中的加入如下配置：registerWithEureka 和 fetchRegistry 设置为false，表明自己属于服务中心主体</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8091</span><br><span class="hljs-attr">eureka:</span><br>  <span class="hljs-attr">instance:</span><br>    <span class="hljs-attr">hostname:</span> <span class="hljs-string">localhost</span><br>  <span class="hljs-attr">client:</span><br>    <span class="hljs-attr">registerWithEureka:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">fetchRegistry:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">serviceUrl:</span><br>      <span class="hljs-attr">defaultZone:</span> <span class="hljs-string">http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span><br></code></pre></div></td></tr></table></figure></li>
+<li><p>启动项目，访问<code>http://localhost:8091</code>，进入Eureka注册中心的管理页面</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103222351.png" srcset="/img/loading.gif" lazyload alt="Eureka注册中心的管理页面"></p>
+</li>
 </ol>
-<h3 id="编程开发"><a href="#编程开发" class="headerlink" title="编程开发"></a>编程开发</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://iterm2.com/">iTerm2</a>，替换原生Terminal，可自定义主题</li>
-<li><a target="_blank" rel="noopener" href="https://ohmyz.sh/">Oh My zsh</a>，zsh扩展，配置主题/代码高亮/代码不全/代码提示之后，你会爱上shell</li>
-<li><a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>，mac的包管理工具，简化开发环境配置，M1芯片可以看这篇教程 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/341831809">M1芯片Mac上Homebrew安装教程</a></li>
-<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a>，小巧轻便功能强大</li>
-<li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/">Intellij IDEA</a>，Java开发必备</li>
-<li><a target="_blank" rel="noopener" href="http://www.sublimetext.com/">Sublime Text 4</a>，平时用来打开各种格式的代码文件，响应很快</li>
-<li><a target="_blank" rel="noopener" href="https://www.macwk.com/soft/navicat-premium">Navicat Premium</a>，数据库管理的图形化工具</li>
-<li><a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">Postman</a>，接口测试工具</li>
-<li><a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop">Docker</a>，容器引擎</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/conda-forge/miniforge/#download">Miniforge3</a>，Anaconda的替代品，用来在M1上跑Tensorflow等，配置教程 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/436908946">【环境备份】Mac M1 系列(Apple Silicon)各版本的 TensorFlow 及安装方法(支持 Mac GPU 加速)</a></li>
-</ol>
-<h3 id="效率提升"><a href="#效率提升" class="headerlink" title="效率提升"></a>效率提升</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://www.alfredapp.com/">Aflred</a>，快速启动应用和便捷搜索，让你可以不使用鼠标和触控板打开任何应用和进行基本的网页搜索，谁用谁知道</li>
-<li><a target="_blank" rel="noopener" href="https://macwk.com/soft/bartender-4">Bartender 4</a>，菜单栏管理软件，自定义菜单栏排布，给你一个简洁优雅的菜单栏</li>
-<li><a target="_blank" rel="noopener" href="https://bjango.com/mac/istatmenus/">iStat Menus</a>，菜单栏系统监控工具，在菜单栏展示CPU/内存/SSD/温度/电池…等信息，装逼神器</li>
-<li><a target="_blank" rel="noopener" href="https://www.snipaste.com/">Snipaste</a>，截图软件，F1截图，F3贴图（搬运工神器）</li>
-<li><a target="_blank" rel="noopener" href="https://macwk.com/soft/flykey">FlyKey（键指如飞）</a>，双击command键展示当前应用所有快捷键，让你免去记快捷键的烦恼</li>
-<li><a target="_blank" rel="noopener" href="https://manytricks.com/moom/">Moom</a>，窗口大小管理，简单分屏</li>
-<li><a target="_blank" rel="noopener" href="https://pilotmoon.com/scrollreverser/">Scroll Reverser</a>，自定义鼠标/触控板滚动方向，让mac滚轮方向不再反人类</li>
-<li><a target="_blank" rel="noopener" href="https://lemon.qq.com/">腾讯柠檬</a>，mac清理软件</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/sbarex/QLMarkdown">QLMarkdown</a>，一个 macOS 上的预览 Markdown 小工具，它能实现与 macOS 原生「预览」应用一样的显示效果。</li>
-<li><a target="_blank" rel="noopener" href="https://www.macwk.com/soft/drawio">draw.io</a>, 一款绘图神器，可以绘制包括流程图、思维导图、类图、UML、泳道图等在内的各种图表，操作简单、模板丰富、功能强大。</li>
+<h3 id="二、创建服务提供者"><a href="#二、创建服务提供者" class="headerlink" title="二、创建服务提供者"></a>二、创建服务提供者</h3><ol>
+<li><p>类似上步骤创建Provider Module</p>
+</li>
+<li><p>在ProviderApplication中加入注解@EnableEurekaClient，声明自己属于一个服务提供者</p>
+<p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103221148.png" srcset="/img/loading.gif" lazyload alt="声明服务提供者"></p>
+</li>
 </ol>
 
             </div>
@@ -316,11 +302,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/M1/">M1</a>
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
                     
-                      <a class="hover-with-bg" href="/tags/Macbook/">Macbook</a>
+                      <a class="hover-with-bg" href="/tags/Springboot/">Springboot</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">软件分享</a>
+                      <a class="hover-with-bg" href="/tags/Dubbo/">Dubbo</a>
+                    
+                      <a class="hover-with-bg" href="/tags/RPC/">RPC</a>
                     
                   </div>
                 
@@ -337,18 +325,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/23080/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Springboot + Dubbo搭建尝试</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/1023/">
-                        <span class="hidden-mobile">论文整理（五） 构建临床决策支持系统的良性生态</span>
+                      <a href="/posts/13171/">
+                        <span class="hidden-mobile">M1 Macbook实用软件整理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
