@@ -4,31 +4,6 @@
   
   
   <entry>
-    <title>Springboot + Dubbo搭建尝试</title>
-    <link href="/posts/23080/"/>
-    <url>/posts/23080/</url>
-    
-    <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近在看Java八股的时候看到了RPC协议，想着看一下Dubbo上手玩一下。</p><h3 id="一、创建Eureka注册中心"><a href="#一、创建Eureka注册中心" class="headerlink" title="一、创建Eureka注册中心"></a>一、创建Eureka注册中心</h3><ol><li><p>New Module创建Eureka模块</p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215621.png" alt="New Module"></p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103215741.png" alt="创建EurekaServer模块"></p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211104154225.png" alt="选择Spring Cloud Discovery -&gt; Eureka Server"></p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220108.png" alt="pom.xml中出现如下依赖"></p></li><li><p>在EurekaServerApplication类中加入注解@EnableEurekaServer，声明自己为服务的注册中心</p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103220357.png" alt="声明服务注册中心"></p></li><li><p>yml中的加入如下配置：registerWithEureka 和 fetchRegistry 设置为false，表明自己属于服务中心主体</p><figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8091</span><br><span class="hljs-attr">eureka:</span><br>  <span class="hljs-attr">instance:</span><br>    <span class="hljs-attr">hostname:</span> <span class="hljs-string">localhost</span><br>  <span class="hljs-attr">client:</span><br>    <span class="hljs-attr">registerWithEureka:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">fetchRegistry:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">serviceUrl:</span><br>      <span class="hljs-attr">defaultZone:</span> <span class="hljs-string">http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span><br></code></pre></div></td></tr></table></figure></li><li><p>启动项目，访问<code>http://localhost:8091</code>，进入Eureka注册中心的管理页面</p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103222351.png" alt="Eureka注册中心的管理页面"></p></li></ol><h3 id="二、创建服务提供者"><a href="#二、创建服务提供者" class="headerlink" title="二、创建服务提供者"></a>二、创建服务提供者</h3><ol><li><p>类似上步骤创建Provider Module</p></li><li><p>在ProviderApplication中加入注解@EnableEurekaClient，声明自己属于一个服务提供者</p><p><img src="https://cdn.jsdelivr.net/gh/darkbin432/ImageHost@latest/images/20211103221148.png" alt="声明服务提供者"></p></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Java</tag>
-      
-      <tag>Springboot</tag>
-      
-      <tag>Dubbo</tag>
-      
-      <tag>RPC</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>M1 Macbook实用软件整理</title>
     <link href="/posts/13171/"/>
     <url>/posts/13171/</url>
@@ -179,9 +154,9 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>论文</tag>
-      
       <tag>COVID-19</tag>
+      
+      <tag>论文</tag>
       
     </tags>
     
@@ -202,11 +177,11 @@
       
       <tag>Machine Learning</tag>
       
-      <tag>Deep Learning</tag>
+      <tag>COVID-19</tag>
       
       <tag>论文</tag>
       
-      <tag>COVID-19</tag>
+      <tag>Deep Learning</tag>
       
       <tag>Unsupervised Learning</tag>
       
@@ -229,11 +204,11 @@
       
       <tag>Machine Learning</tag>
       
+      <tag>论文</tag>
+      
       <tag>Deep Learning</tag>
       
       <tag>Health Informatics</tag>
-      
-      <tag>论文</tag>
       
     </tags>
     
