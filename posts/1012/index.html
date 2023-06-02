@@ -24,7 +24,7 @@
 <meta property="og:description" content="Awesome-pyecharts                                            var chart_7ca6fd0c282f44f4b14f013717e96523 &#x3D; echarts.init(             document.getElementById(&#39;7ca6fd0c282f44f4b14f013717e9652">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-02T11:58:38.000Z">
-<meta property="article:modified_time" content="2023-06-02T00:25:17.383Z">
+<meta property="article:modified_time" content="2023-06-02T00:33:59.191Z">
 <meta property="article:author" content="darkbin">
 <meta property="article:tag" content="出行">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.6k 字
+      3.7k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      22 分钟
+      31 分钟
     </span>
   
 
@@ -252,7 +252,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：星期五, 六月 2日 2023, 8:25 早上
+                  本文最后更新于：星期五, 六月 2日 2023, 8:33 早上
                 
               </p>
             
@@ -438,6 +438,64 @@
     }
 };
         chart_7ca6fd0c282f44f4b14f013717e96523.setOption(option_7ca6fd0c282f44f4b14f013717e96523);
+        chart_7ca6fd0c282f44f4b14f013717e96523.on('click', function (param) {
+            var selected = param.name;
+            console.log(param);
+            if (param.data && selected) {
+                switch (selected) {
+                    case '北京市':
+                        location.href = "/resources/provinces/北京市.html";
+                        break;
+                    case '上海市':
+                        location.href = "/resources/provinces/上海市.html";
+                        break;
+                    case '天津市':
+                        location.href = "/resources/provinces/天津市.html";
+                        break;
+                    case '安徽省':
+                        location.href = "/resources/provinces/安徽省.html";
+                        break;
+                    case '浙江省':
+                        location.href = "/resources/provinces/浙江省.html";
+                        break;
+                    case '广东省':
+                        location.href = "/resources/provinces/广东省.html";
+                        break;
+                    case '福建省':
+                        location.href = "/resources/provinces/广东省.html";
+                        break;
+                    case '辽宁省':
+                        location.href = "/resources/provinces/辽宁省.html";
+                        break;
+                    case '四川省':
+                        location.href = "/resources/provinces/四川省.html";
+                        break;
+                    case '山东省':
+                        location.href = "/resources/provinces/山东省.html";
+                        break;
+                    case '江苏省':
+                        location.href = "/resources/provinces/江苏省.html";
+                        break;
+                    case '江西省':
+                        location.href = "/resources/provinces/江西省.html";
+                        break;
+                    case '河北省':
+                        location.href = "/resources/provinces/河北省.html";
+                        break;
+                    case '海南省':
+                        location.href = "/resources/provinces/海南省.html";
+                        break;
+                    case '湖北省':
+                        location.href = "/resources/provinces/湖北省.html";
+                        break;
+                    case '湖南省':
+                        location.href = "/resources/provinces/湖南省.html";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
     </script>
 </body>
 </html>
